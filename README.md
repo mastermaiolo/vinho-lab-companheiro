@@ -32,6 +32,25 @@ sem envio de dados. Coerente com o RGPD.
 > mas a responsabilidade pela interpretação e pela análise oficial é sempre de um
 > laboratório acreditado.
 
+## Motivação
+
+> A ideia deste projeto nasceu da minha própria experiência num laboratório de
+> análise de vinhos, onde percebi que um pouco de praticidade pode fazer
+> diferença na realização de uma bateria de ensaios. Ao criar este webapp — com
+> todo o processamento dos dados feito diretamente no seu computador, sem envio de
+> valores para qualquer servidor — espero contribuir para uma melhor dinâmica no
+> laboratório e ajudar a obter resultados próximos dos de um boletim oficial,
+> permitindo compreender a qualidade e a legalidade de um vinho e perceber se
+> cumpre as normas portuguesas e brasileiras (incluindo para efeitos de exportação
+> ou importação entre os dois países).
+>
+> É um projeto em construção: por agora, recomendo que faça os cálculos em paralelo
+> e confirme sempre os resultados.
+>
+> Espero que este projeto o possa ajudar — tal como espero que me ajude a mim.
+>
+> — _o autor_
+
 ## Funcionalidades
 
 - **Validação cruzada BR ↔ PT/UE** por categoria de vinho, com conversão
@@ -147,6 +166,24 @@ ever sent. GDPR-friendly by design.
 > accredited laboratory. Limits and formulas come from published legislation, but
 > interpretation and official analysis always remain the responsibility of an
 > accredited lab.
+
+## Motivation
+
+> The idea for this project grew out of my own experience working in a
+> wine-analysis laboratory, where I saw how a little practicality can make a real
+> difference when running a battery of tests. By building this web app — with all
+> data processing done directly on your own computer, with no values ever sent to a
+> server — I hope to contribute to a smoother workflow in the lab and help produce
+> results close to those of an official report, making it easier to gauge a wine's
+> quality and legal compliance, and to see whether it meets Portuguese and
+> Brazilian standards (including for export or import between the two countries).
+>
+> This is a work in progress: for now, I recommend running the calculations
+> separately and always double-checking the results.
+>
+> I hope this project helps you — just as I hope it helps me.
+>
+> — _the author_
 
 ## Features
 
