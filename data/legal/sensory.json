@@ -1,0 +1,344 @@
+{
+  "visual": {
+    "label": "Exame Visual",
+    "max_points": 15,
+    "criteria": [
+      {
+        "key": "limpidez",
+        "label": "Limpidez",
+        "max": 5,
+        "scale": {
+          "excelente": 5,
+          "muito_boa": 4,
+          "boa": 3,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        },
+        "descriptors": [
+          "cristalina",
+          "límpida",
+          "ligeiramente turva",
+          "turva",
+          "opaca"
+        ]
+      },
+      {
+        "key": "aspecto",
+        "label": "Aspecto / Cor",
+        "max": 10,
+        "scale": {
+          "excelente": 10,
+          "muito_bom": 8,
+          "bom": 6,
+          "satisfatorio": 4,
+          "insuficiente": 2
+        },
+        "descriptors_branco": [
+          "amarelo-palha",
+          "amarelo-citrino",
+          "amarelo-dourado",
+          "amarelo-âmbar",
+          "amarelo-esverdeado",
+          "dourado",
+          "âmbar"
+        ],
+        "descriptors_rose": [
+          "rosa-pálido",
+          "rosa-salmão",
+          "rosa-cereja",
+          "rosa-âmbar",
+          "casca-de-cebola"
+        ],
+        "descriptors_tinto": [
+          "violáceo",
+          "rubi",
+          "granada",
+          "tijolo",
+          "âmbar"
+        ],
+        "descriptors_espumante": [
+          "perlage fina",
+          "perlage abundante",
+          "bolhas grosseiras",
+          "espuma persistente",
+          "espuma efémera",
+          "cordão contínuo"
+        ]
+      }
+    ]
+  },
+  "olfativo": {
+    "label": "Exame Olfativo",
+    "max_points": 30,
+    "criteria": [
+      {
+        "key": "intensidade",
+        "label": "Intensidade",
+        "max": 8,
+        "scale": {
+          "excelente": 8,
+          "muito_boa": 6,
+          "boa": 4,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        }
+      },
+      {
+        "key": "qualidade_genuinidade",
+        "label": "Qualidade / Genuinidade",
+        "max": 8,
+        "scale": {
+          "excelente": 8,
+          "muito_boa": 6,
+          "boa": 4,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        }
+      },
+      {
+        "key": "qualidade_franqueza",
+        "label": "Franqueza",
+        "max": 6,
+        "scale": {
+          "excelente": 6,
+          "muito_boa": 5,
+          "boa": 4,
+          "satisfatoria": 3,
+          "insuficiente": 2
+        }
+      },
+      {
+        "key": "qualidade_complexidade",
+        "label": "Complexidade",
+        "max": 8,
+        "scale": {
+          "excelente": 8,
+          "muito_boa": 6,
+          "boa": 4,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        }
+      }
+    ],
+    "famílias_aromaticas": {
+      "frutado": [
+        "frutos brancos (maçã, pêra, marmelo)",
+        "citrinos (limão, lima, toranja)",
+        "frutos tropicais (ananás, manga, maracujá, lichia)",
+        "frutos de caroço (pêssego, alperce, ameixa)",
+        "frutos vermelhos (morango, framboesa, cereja, groselha)",
+        "frutos pretos (amora, mirtilo, ameixa preta, cassis)",
+        "frutos secos (passas, figos secos, ameixa seca)",
+        "frutos compotados"
+      ],
+      "floral": [
+        "flores brancas (acácia, sabugueiro, madressilva)",
+        "rosas",
+        "violetas",
+        "esteva",
+        "lavanda"
+      ],
+      "vegetal_herbaceo": [
+        "erva fresca",
+        "erva cortada",
+        "ervas aromáticas",
+        "feno",
+        "tabaco",
+        "chá preto",
+        "chá verde",
+        "pimento verde",
+        "espargos"
+      ],
+      "especiarias": [
+        "pimenta preta",
+        "pimenta branca",
+        "canela",
+        "cravinho",
+        "noz-moscada",
+        "alcaçuz",
+        "anis",
+        "alcarávia"
+      ],
+      "balsamicos_resinosos": [
+        "alcatrão",
+        "resina",
+        "alcaçuz",
+        "mentol",
+        "eucalipto"
+      ],
+      "torrefacao_madeira": [
+        "baunilha",
+        "coco",
+        "café",
+        "cacau",
+        "chocolate",
+        "fumo",
+        "tostado",
+        "tabaco louro",
+        "noz"
+      ],
+      "animal_couro": [
+        "couro",
+        "pelo molhado",
+        "carne curada",
+        "carne fumada",
+        "almíscar",
+        "civeta"
+      ],
+      "minerais": [
+        "pedra molhada",
+        "ardósia",
+        "giz",
+        "iodo",
+        "salinidade"
+      ],
+      "evolutivos": [
+        "frutos secos (avelã, amêndoa, noz)",
+        "mel",
+        "cera de abelha",
+        "cogumelos",
+        "trufa",
+        "subbosque",
+        "terrosos"
+      ],
+      "lacticos": [
+        "manteiga",
+        "natas",
+        "iogurte",
+        "queijo fresco"
+      ]
+    }
+  },
+  "gustativo": {
+    "label": "Exame Gustativo",
+    "max_points": 44,
+    "criteria": [
+      {
+        "key": "intensidade",
+        "label": "Intensidade",
+        "max": 8,
+        "scale": {
+          "excelente": 8,
+          "muito_boa": 6,
+          "boa": 4,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        }
+      },
+      {
+        "key": "qualidade_genuinidade",
+        "label": "Qualidade / Genuinidade",
+        "max": 8,
+        "scale": {
+          "excelente": 8,
+          "muito_boa": 6,
+          "boa": 4,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        }
+      },
+      {
+        "key": "equilibrio",
+        "label": "Equilíbrio (ácido / álcool / corpo / taninos)",
+        "max": 10,
+        "scale": {
+          "excelente": 10,
+          "muito_bom": 8,
+          "bom": 6,
+          "satisfatorio": 4,
+          "insuficiente": 2
+        }
+      },
+      {
+        "key": "persistencia",
+        "label": "Persistência / Final de boca",
+        "max": 8,
+        "scale": {
+          "excelente": 8,
+          "muito_boa": 6,
+          "boa": 4,
+          "satisfatoria": 2,
+          "insuficiente": 1
+        }
+      },
+      {
+        "key": "qualidade_global_gustativa",
+        "label": "Qualidade global gustativa",
+        "max": 10,
+        "scale": {
+          "excelente": 10,
+          "muito_boa": 8,
+          "boa": 6,
+          "satisfatoria": 4,
+          "insuficiente": 2
+        }
+      }
+    ],
+    "descritores_estrutura": {
+      "doçura": [
+        "seco",
+        "meio-seco",
+        "meio-doce",
+        "doce",
+        "muito doce",
+        "licoroso"
+      ],
+      "acidez": [
+        "plana",
+        "fresca",
+        "viva",
+        "nervosa",
+        "agressiva"
+      ],
+      "álcool": [
+        "fraco",
+        "ligeiro",
+        "equilibrado",
+        "quente",
+        "ardente"
+      ],
+      "corpo": [
+        "aguado",
+        "leve",
+        "médio",
+        "encorpado",
+        "denso",
+        "untuoso"
+      ],
+      "taninos": [
+        "ausentes",
+        "macios",
+        "redondos",
+        "presentes",
+        "firmes",
+        "secos",
+        "adstringentes",
+        "verdes"
+      ],
+      "final": [
+        "curto (< 3 s)",
+        "médio (3-6 s)",
+        "longo (6-12 s)",
+        "muito longo (> 12 s)"
+      ]
+    }
+  },
+  "harmonia": {
+    "label": "Harmonia / Impressão Geral",
+    "max_points": 11,
+    "criteria": [
+      {
+        "key": "harmonia",
+        "label": "Harmonia / juízo geral",
+        "max": 11,
+        "scale": {
+          "excelente": 11,
+          "muito_boa": 9,
+          "boa": 7,
+          "satisfatoria": 5,
+          "insuficiente": 3
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "PT_para_BR": {
+    "rota": "Portugal / UE → Brasil",
+    "autoridade_destino": "MAPA — Ministério da Agricultura e Pecuária (Brasil)",
+    "base_legal_destino": [
+      "Lei nº 7.678/1988 — Lei do Vinho",
+      "Decreto nº 8.198/2014 — Regulamento da Lei do Vinho",
+      "IN MAPA nº 14/2018 — PIQ (alterada pela Portaria nº 723/2024)",
+      "IN MAPA nº 67/2018 — Informatização da certificação import./export.",
+      "IN MAPA nº 17/2011 — Registro de produtos",
+      "Norma Operacional DIPOV nº 1/2019 — Cartilhão de bebidas",
+      "Resolução GMC nº 45/1996 — Regulamento Vitivinícola MERCOSUL"
+    ],
+    "registos_previos_importador": [
+      "CNPJ ativo com atividade económica compatível (CNAE de comércio atacadista de bebidas).",
+      "Registo do estabelecimento importador no MAPA via **SIPEAGRO** (Sistema Integrado de Produtos e Estabelecimentos Agropecuários) — obtenção de Certificado de Registro do Estabelecimento, sem o qual nada se importa.",
+      "Habilitação no SISCOMEX/RADAR da Receita Federal para operar comércio exterior."
+    ],
+    "registo_previo_produto": [
+      "Registo do **rótulo** de cada SKU no MAPA antes do primeiro embarque (o rótulo brasileiro pode ser sobreposto a contra-rótulo do original).",
+      "Apresentação de **memorial descritivo** do produto: ingredientes, aditivos, processo de elaboração, casta(s), origem da uva, TAV, açúcares, SO₂ total.",
+      "Indicação da classificação MERCOSUL (vinho de mesa, vinho fino, espumante, etc.) — produtos que não se enquadrem nas tabelas da IN 14/2018 carecem de **Certificado de Tipicidade** emitido pela autoridade do país de origem."
+    ],
+    "documentos_acompanhar_embarque": [
+      "**Certificado de Origem** emitido pela entidade certificadora competente (IVV para vinhos sem DOP/IGP; CVR Douro, CVR Alentejo, IVDP, etc. para DOP/IGP) — assinado, com número sequencial, sem rasuras (o MAPA rejeita certificados sem assinatura).",
+      "**Boletim de Análise** emitido por laboratório autorizado pelo IVV (Lista 3 do IVV) ou laboratório credenciado pelo MAPA via **Siscole** — validade máxima **1 ano** desde a data de emissão.",
+      "**Certificado Sanitário / Declaração de Livre Venda** emitida pelo IVV (a pedido do exportador, deai@ivv.gov.pt) — atesta que o produto é livremente comercializado em Portugal.",
+      "**Fatura comercial** e **Packing list** com NCM correto (2204.21 garrafas até 2 L; 2204.22 entre 2-10 L; 2204.10 espumantes).",
+      "**Conhecimento de embarque** (BL/AWB).",
+      "**Licença de Importação (LI)** registada no SISCOMEX antes do embarque, com anuência do MAPA."
+    ],
+    "analise_no_porto": "Na **primeira importação** de cada vinho/SKU, o Vigiagro recolhe amostra no porto de chegada (Santos, Itajaí, Rio de Janeiro ou Paranaguá) para análise laboratorial de controlo: **mínimo 1 litro** — habitualmente **2 garrafas de 750 mL**. A mercadoria fica retida em entreposto aduaneiro até resultado (15-30 dias). Uma vez aprovado, o mesmo produto **pode ser re-importado durante 3 anos** sem nova análise (basta o boletim de análise atualizado).",
+    "exigencias_tecnicas": [
+      "Cumprimento integral dos limites da IN 14/2018 para a categoria declarada (álcool 8,6-14 %v/v para vinhos de mesa/finos; acidez total ≥ 55 meq/L; acidez volátil ≤ 20 meq/L; SO₂ total ≤ 350 mg/L; metanol ≤ 350 mg/L em tinto, ≤ 250 em branco/rosé; extrato seco reduzido ≥ 16 g/L tinto, ≥ 13 g/L branco/rosé).",
+      "**Relação álcool em peso/extrato seco reduzido ≤ 4,8** para tintos — marcador de adulteração por diluição que apanha muitos vinhos europeus de vinificação leve.",
+      "Ausência de corante artificial, edulcorantes e glicerol exógeno.",
+      "Práticas enológicas conformes ao Regulamento Vitivinícola do MERCOSUL — **atenção**: algumas práticas autorizadas na UE não o são no MERCOSUL."
+    ],
+    "rotulagem_obrigatoria_brasil": [
+      "Língua portuguesa (variante PT-BR aceite; pode ser contra-rótulo).",
+      "Denominação de venda exata correspondente à categoria PIQ (\"Vinho Fino Tinto Seco\", \"Espumante Brut\", \"Vinho do Porto Tawny\", etc.).",
+      "Nome e endereço do **importador no Brasil** com CNPJ.",
+      "Nome e endereço do produtor/exportador no país de origem.",
+      "TAV (\"álcool 13% v/v\" ou \"13°GL\").",
+      "Volume líquido em mL ou L.",
+      "Lote (pode ser na contra-etiqueta).",
+      "País de origem (\"Produto de Portugal\").",
+      "Indicação de **alergénios** (sulfitos quando SO₂ total > 10 mg/L — \"Contém sulfitos\").",
+      "**Frase de advertência** legalmente obrigatória: \"EVITE O CONSUMO EXCESSIVO DE ÁLCOOL\" (cor contrastante, tamanho mínimo).",
+      "**Declaração nutricional obrigatória** desde 2023 (RDC ANVISA nº 429/2020 e RDC nº 727/2022 — energia, carboidratos, açúcares totais).",
+      "Identificação SAC do importador (telefone gratuito ou e-mail).",
+      "**Não permitido**: alegações de saúde, símbolos religiosos sem licença, rótulos que possam confundir com bebidas destiladas tradicionais."
+    ],
+    "armadilhas_comuns_para_exportadores_portugueses": [
+      "**Certificado de origem sem assinatura ou número sequencial** — rejeição imediata pelo MAPA.",
+      "**Boletim de análise vencido** (> 1 ano) à chegada — exige novo boletim em laboratório credenciado, com custo de €300-€600 por produto.",
+      "**Acidez volátil ligeiramente acima dos 20 meq/L** (≈ 1,2 g/L em ácido acético) em vinhos envelhecidos — a UE permite mais tolerância, mas o MAPA não dá margem.",
+      "**Extrato seco reduzido baixo** em brancos finos modernos (vinificação a frio, elevada limpidez) — pode ficar abaixo dos 13 g/L mínimos exigidos no Brasil.",
+      "**Categoria do produto mal classificada**: \"Reserva\" e \"Grande Reserva\" portugueses não correspondem 1:1 às designações brasileiras. Recomenda-se classificar como \"Vinho Fino Tinto\" e usar a menção portuguesa apenas como informação de marketing.",
+      "**Falta da declaração nutricional** no rótulo — recente, ainda apanha muitos exportadores.",
+      "**Vinhos com práticas enológicas não reconhecidas** no MERCOSUL (ex: certas resinas adsorventes, alguns coadjuvantes biotecnológicos).",
+      "**Açúcar residual mal classificado**: o que é \"Meio-seco\" na UE (≤ 12 g/L) pode cair noutra categoria brasileira; corrigir a etiquetagem para não desencadear nova análise no porto.",
+      "**Pagamento da contribuição ao IVV** em atraso impede a emissão do certificado de origem.",
+      "**Volume da amostra para análise no porto** insuficiente — o MAPA exige mínimo 1L, preferir embarcar com unidades extras destinadas a amostragem para evitar destruir stock."
+    ],
+    "tributacao_brasil_referencial": "Importação tributada por: Imposto de Importação (II ~20-27%), IPI (~10% para vinho de mesa, isento para Portos e Madeiras DOP em alguns casos), PIS/COFINS-Importação (~11,75% combinados), ICMS estadual variável (25-30%, com substituição tributária na maioria dos estados). Carga total tipicamente 60-85% sobre o valor CIF + IPI.",
+    "tempo_estimado_processo": "Primeira importação: 30-60 dias do embarque à libertação. Importações subsequentes (com produto já aprovado): 7-15 dias."
+  },
+  "BR_para_PT_UE": {
+    "rota": "Brasil → Portugal / União Europeia",
+    "autoridade_destino": "Comissão Europeia / IVV (em Portugal)",
+    "base_legal_destino": [
+      "Reg. (UE) 1308/2013 — OCM única",
+      "Reg. Delegado (UE) 2018/273 — Documento VI-1 e procedimentos",
+      "Reg. (UE) 2019/934 — Práticas enológicas autorizadas",
+      "Reg. (UE) 2019/33 — Rotulagem, DOP/IGP",
+      "Reg. (UE) 2023/915 — Contaminantes (OTA, Pb, Cd)",
+      "IN MAPA nº 67/2018 — Procedimentos brasileiros de exportação à CE",
+      "Decreto-Lei nº 73/2010 (PT) — CIEC, entrepostos fiscais"
+    ],
+    "registos_previos_exportador": [
+      "Registo do produto e estabelecimento exportador no **SIPEAGRO** do MAPA (atividade de exportador).",
+      "Habilitação no SISCOMEX/RADAR.",
+      "Inscrição no portal de serviços do MAPA para emissão eletrónica de certificados."
+    ],
+    "documentos_acompanhar_embarque": [
+      "**Documento VI-1** preenchido em duas partes:\n  - Parte 1 — Certificado de origem emitido pelo MAPA (Auditor Fiscal Federal Agropecuário).\n  - Parte 2 — Boletim de análise emitido por laboratório credenciado pelo MAPA (Rede Nacional de Laboratórios Agropecuários) com os parâmetros exigidos pela UE: TAV adquirido e total, açúcares totais, acidez total e volátil, SO₂ total e livre, sobrepressão (se espumante).",
+      "**Termo de Compromisso** específico para exportação à Comunidade Europeia (Anexo V da IN MAPA nº 67/2018) — obrigatório.",
+      "**Certificado fitossanitário** quando exigido.",
+      "Fatura comercial e packing list com NCM correto.",
+      "Conhecimento de embarque."
+    ],
+    "exigencias_tecnicas": [
+      "Cumprimento de TODOS os limites do Reg. UE 2019/934 e 2023/915 — **limites de SO₂ inferiores aos brasileiros** (150 mg/L tinto seco vs 350 mg/L BR).",
+      "Acidez volátil ≤ 1,2 g/L em ácido acético (tinto) ou 1,08 g/L (branco/rosé) — **mais restritivo** que os 20 meq/L brasileiros.",
+      "Práticas enológicas restritas ao Anexo I do Reg. 2019/934.",
+      "Para vinhos biológicos: certificado **COI** ou TRACES NT do organismo de controlo.",
+      "Para DOP/IGP usadas como termo equivalente: respeitar caderno de especificações homologado."
+    ],
+    "rotulagem_obrigatoria_ue": [
+      "Pelo menos uma língua oficial da UE (em Portugal, **português obrigatório**).",
+      "Denominação categórica (\"Vinho\", \"Vinho espumante\", etc.).",
+      "TAV adquirido (\"% vol\").",
+      "Volume nominal.",
+      "Indicação \"contém sulfitos\" / \"contains sulphites\" se SO₂ > 10 mg/L.",
+      "Identificação do engarrafador.",
+      "País de origem.",
+      "Número de lote.",
+      "**Declaração nutricional e lista de ingredientes** obrigatórias desde 8/12/2023 (Reg. UE 2021/2117) — podem ser fornecidas eletronicamente via QR Code (\"e-label\") desde que aparéçam no rótulo as menções básicas."
+    ],
+    "armadilhas_comuns_para_exportadores_brasileiros": [
+      "**SO₂ total acima dos limites UE** — comum em vinhos brasileiros, que frequentemente usam SO₂ próximo do limite nacional (350 mg/L) muito superior ao europeu (150-250 mg/L dependendo da categoria).",
+      "**Acidez volátil** entre 1,1 e 1,2 g/L que passa no Brasil mas falha na UE para brancos.",
+      "**Documento VI-1** com inconsistência entre Parte 1 (MAPA) e Parte 2 (laboratório) — os dados têm de coincidir exatamente.",
+      "**Práticas enológicas não autorizadas na UE** — algumas leveduras ou enzimas permitidas no MERCOSUL não constam do anexo I do Reg. 2019/934.",
+      "Falta do **Termo de Compromisso** específico para a CE — bloqueia a certificação MAPA.",
+      "**Declaração nutricional/ingredientes** ausente ou em formato não conforme."
+    ]
+  }
+}

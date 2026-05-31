@@ -1,0 +1,112 @@
+{
+  "PKA1_SULFUROUS": 1.81,
+  "MOLECULAR_SO2_TARGETS": {
+    "Proteção mínima": 0.5,
+    "Controlo de Brettanomyces": 0.625,
+    "Proteção robusta (doces / guarda)": 0.8
+  },
+  "SPARKLING_SWEETNESS": [
+    {
+      "pt": "Bruto Natural",
+      "outros": "Brut Nature / Zéro Dosage / Naturherb",
+      "min": 0.0,
+      "max": 3.0,
+      "nota": "Sem adição de licor de expedição (dosagem)."
+    },
+    {
+      "pt": "Extra-Bruto",
+      "outros": "Extra Brut",
+      "min": 0.0,
+      "max": 6.0
+    },
+    {
+      "pt": "Bruto",
+      "outros": "Brut",
+      "min": 0.0,
+      "max": 12.0
+    },
+    {
+      "pt": "Extra-Seco",
+      "outros": "Extra Dry / Extra Sec",
+      "min": 12.0,
+      "max": 17.0
+    },
+    {
+      "pt": "Seco",
+      "outros": "Sec / Dry / Secco",
+      "min": 17.0,
+      "max": 32.0
+    },
+    {
+      "pt": "Meio-Seco",
+      "outros": "Demi-Sec / Medium Dry / Abboccato",
+      "min": 32.0,
+      "max": 50.0
+    },
+    {
+      "pt": "Doce",
+      "outros": "Doux / Sweet / Dolce",
+      "min": 50.0,
+      "max": null
+    }
+  ],
+  "PORT_SWEETNESS": [
+    {
+      "pt": "Extra-Seco",
+      "min": 17.5,
+      "max": 40.0
+    },
+    {
+      "pt": "Seco",
+      "min": 40.0,
+      "max": 65.0
+    },
+    {
+      "pt": "Meio-Seco",
+      "min": 65.0,
+      "max": 85.0
+    },
+    {
+      "pt": "Doce",
+      "min": 85.0,
+      "max": 130.0
+    },
+    {
+      "pt": "Muito Doce (Lágrima)",
+      "min": 130.0,
+      "max": null
+    }
+  ],
+  "MADEIRA_STYLES": [
+    {
+      "casta": "Sercial",
+      "doçura": "Extra-seco a seco",
+      "perfil": "Mais leve e pálido, alta acidez."
+    },
+    {
+      "casta": "Verdelho",
+      "doçura": "Meio-seco",
+      "perfil": "Mais corpo e açúcar residual que o Sercial."
+    },
+    {
+      "casta": "Boal (Bual)",
+      "doçura": "Meio-doce",
+      "perfil": "Mais cheio, escuro e doce que o Verdelho."
+    },
+    {
+      "casta": "Malvasia (Malmsey)",
+      "doçura": "Doce",
+      "perfil": "O mais rico e doce dos Madeiras varietais."
+    },
+    {
+      "casta": "Terrantez",
+      "doçura": "Meio-seco a meio-doce",
+      "perfil": "Raro, acidez marcante."
+    },
+    {
+      "casta": "Tinta Negra",
+      "doçura": "Variável (todos os estilos)",
+      "perfil": "Casta mais plantada; base de muitos Madeiras."
+    }
+  ]
+}

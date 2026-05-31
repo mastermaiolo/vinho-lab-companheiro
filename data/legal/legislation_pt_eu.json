@@ -1,0 +1,843 @@
+{
+  "regulator": "IVV - Instituto da Vinha e do Vinho, I.P.",
+  "regulatory_basis": [
+    "Reg. (UE) 1308/2013 - Organização Comum de Mercado",
+    "Reg. Delegado (UE) 2019/934 - Práticas enológicas",
+    "Reg. Delegado (UE) 2019/33 - Rotulagem, DOP/IGP",
+    "Reg. (UE) 2018/848 - Produção biológica",
+    "Reg. (UE) 2023/915 - Contaminantes (OTA, Pb, Cd)",
+    "Decreto-Lei nº 61/2020 (PT)",
+    "Portaria nº 26/2017 (alterada pela Portaria nº 314/2024/1)"
+  ],
+  "import_notes": "Para importação na União Europeia de vinhos de países terceiros é geralmente exigido: (1) Documento VI-1 emitido por organismo competente do país de origem com análise por laboratório autorizado; (2) Para alguns países há acordos bilaterais que dispensam o VI-1; (3) Conformidade com práticas enológicas autorizadas (Anexo I do Reg. 2019/934); (4) Para vinhos biológicos: certificado COI ou TRACES NT do organismo de controlo. Em Portugal, o IVV emite Declaração de Livre Venda / Certificado Sanitário para exportação com base em boletim de análise emitido por laboratório autorizado (Lista 3 do IVV).",
+  "categories": {
+    "vinho_tinto": {
+      "label": "Vinho tinto tranquilo",
+      "definition": "Vinho de uvas frescas, TAV adquirido min. 8,5% (zona vitícola), max. 15% sem práticas especiais",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": 15.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Título alcoométrico volúmico total",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.2,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total (açúcares < 5 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 150.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "SO₂ total (açúcares ≥ 5 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 200.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Sobrepressão de CO₂",
+          "unit": "bar",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS314-01",
+          "note": "Acima de 0,5 bar requer reclassificação como frisante/espumante."
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Cádmio",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.01,
+          "method": "OIV-MA-AS322-07"
+        },
+        {
+          "name": "Arsénio",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS323-01"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Ferro",
+          "unit": "mg/L",
+          "min": null,
+          "max": null,
+          "method": "OIV-MA-AS322-05",
+          "note": "Sem limite legal mas relevante para estabilidade (>10 mg/L risco de casse férrica)."
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "vinho_branco_rose": {
+      "label": "Vinho branco ou rosé tranquilo",
+      "definition": "Vinho branco/rosé de uvas frescas, TAV adquirido min. 8,5%, max. 15%",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": 15.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Título alcoométrico volúmico total",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.08,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total (açúcares < 5 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 200.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "SO₂ total (açúcares ≥ 5 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Sobrepressão de CO₂",
+          "unit": "bar",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS314-01"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Cádmio",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.01,
+          "method": "OIV-MA-AS322-07"
+        },
+        {
+          "name": "Arsénio",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS323-01"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 150.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "vinho_doce": {
+      "label": "Vinho doce tranquilo (açúcares > 45 g/L)",
+      "definition": "Vinho com mais de 45 g/L de açúcares residuais",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": 15.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Açúcares totais",
+          "unit": "g/L",
+          "min": 45.0,
+          "max": null,
+          "method": "OIV-MA-AS311-01A"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.2,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 400.0,
+          "method": "OIV-MA-AS323-04B",
+          "note": "Limite específico para certos vinhos doces (Anexo I-B Reg. 2019/934)."
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "espumante_qualidade": {
+      "label": "Vinho espumante de qualidade",
+      "definition": "TAV total min. 9,5%, TAV adquirido min. 9%, sobrepressão >= 3,5 bar a 20°C",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 9.0,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Título alcoométrico volúmico total",
+          "unit": "% vol a 20°C",
+          "min": 9.5,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Sobrepressão a 20°C",
+          "unit": "bar",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS314-01",
+          "note": "Mínimo 3 bar para recipientes < 25 cl."
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.08,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 185.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "espumante": {
+      "label": "Vinho espumante (não-qualidade)",
+      "definition": "Sobrepressão >= 3 bar a 20°C, TAV total min. 8,5%",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Sobrepressão a 20°C",
+          "unit": "bar",
+          "min": 3.0,
+          "max": null,
+          "method": "OIV-MA-AS314-01"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.08,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 235.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "frisante": {
+      "label": "Vinho frisante",
+      "definition": "Sobrepressão 1 a 2,5 bar a 20°C, TAV adquirido min. 7%, TAV total min. 9%",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 7.0,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Título alcoométrico volúmico total",
+          "unit": "% vol a 20°C",
+          "min": 9.0,
+          "max": null,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Sobrepressão a 20°C",
+          "unit": "bar",
+          "min": 1.0,
+          "max": 2.5,
+          "method": "OIV-MA-AS314-01"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.08,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "licoroso": {
+      "label": "Vinho licoroso (ex: Porto, Madeira, Moscatel)",
+      "definition": "TAV adquirido 15-22%, TAV total min. 17,5% (com exceções para certas DOP)",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 15.0,
+          "max": 22.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Título alcoométrico volúmico total",
+          "unit": "% vol a 20°C",
+          "min": 17.5,
+          "max": null,
+          "method": "OIV-MA-AS312-01A",
+          "note": "12% para certos licorosos DOP (ex: Vinho do Porto Branco Leve Seco mín. 16,5%)."
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.5,
+          "method": "OIV-MA-AS313-02",
+          "note": "Limite específico para licorosos; alguns DOP envelhecidos toleram 1,8 g/L."
+        },
+        {
+          "name": "SO₂ total (açúcares < 5 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 150.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "SO₂ total (açúcares ≥ 5 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 200.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Açúcares totais",
+          "unit": "g/L",
+          "min": null,
+          "max": null,
+          "method": "OIV-MA-AS311-01A",
+          "note": "Variável por categoria de doçura. Ver subcategorias DOP (Porto, Madeira)."
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.15,
+          "method": "OIV-MA-AS322-12",
+          "note": "Reg. 2023/915 estabelece 0,15 mg/L para licorosos vs 0,10 nos restantes vinhos."
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "porto": {
+      "label": "Vinho do Porto (DOP Porto)",
+      "definition": "Vinho licoroso DOP do Douro fortificado com aguardente vínica a 77% vol (±0,5). TAV adquirido 19-22% vol. Doçura: Extra-Seco 17,5-40, Seco 40-65, Meio-Seco 65-85, Doce 85-130, Muito Doce >130 g/L (IVDP). Branco Leve Seco: TAV mín. 16,5%.",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 19.0,
+          "max": 22.0,
+          "method": "OIV-MA-AS312-01A",
+          "note": "Branco Leve Seco admite mínimo de 16,5% vol."
+        },
+        {
+          "name": "Açúcares totais",
+          "unit": "g/L",
+          "min": null,
+          "max": null,
+          "method": "OIV-MA-AS311-01A",
+          "note": "Classe de doçura IVDP: Extra-Seco 17,5-40 / Seco 40-65 / Meio-Seco 65-85 / Doce 85-130 / Muito Doce >130."
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.5,
+          "method": "OIV-MA-AS313-02",
+          "note": "Tawnies muito envelhecidos podem aproximar-se de 1,8 g/L por concentração oxidativa."
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 200.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.15,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "madeira": {
+      "label": "Vinho Madeira (DOP Madeira)",
+      "definition": "Vinho licoroso DOP da Madeira, fortificado e submetido a estufagem/canteiro. TAV adquirido 17-22% vol. Estilos varietais: Sercial (extra-seco/seco), Verdelho (meio-seco), Boal (meio-doce), Malvasia (doce), Terrantez, Tinta Negra.",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 17.0,
+          "max": 22.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Açúcares totais",
+          "unit": "g/L",
+          "min": null,
+          "max": null,
+          "method": "OIV-MA-AS311-01A",
+          "note": "Por estilo varietal: Sercial seco / Verdelho meio-seco / Boal meio-doce / Malvasia doce."
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 4.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01",
+          "note": "Madeira distingue-se pela acidez naturalmente elevada (castas Sercial, Verdelho)."
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.5,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 200.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.15,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "moscatel_setubal": {
+      "label": "Moscatel de Setúbal (DOP)",
+      "definition": "Vinho licoroso DOP da Península de Setúbal, de casta Moscatel, com maceração prolongada das películas. TAV adquirido 16,5-22% vol, naturalmente doce.",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 16.5,
+          "max": 22.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Açúcares totais",
+          "unit": "g/L",
+          "min": 100.0,
+          "max": null,
+          "method": "OIV-MA-AS311-01A",
+          "note": "Vinho naturalmente doce; tipicamente 150-200 g/L."
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.5,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 200.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.15,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        }
+      ]
+    },
+    "biologico_tinto": {
+      "label": "Vinho biológico tinto (Reg. UE 2018/848)",
+      "definition": "Vinho certificado biológico — regras mais restritivas para SO₂ e práticas enológicas",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": 15.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.2,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total - tinto bio (açúcares < 2 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 100.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "SO₂ total - tinto bio (açúcares ≥ 2 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 170.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        }
+      ]
+    },
+    "biologico_branco_rose": {
+      "label": "Vinho biológico branco ou rosé (Reg. UE 2018/848)",
+      "definition": "Branco/rosé certificado biológico",
+      "parameters": [
+        {
+          "name": "Título alcoométrico volúmico adquirido",
+          "unit": "% vol a 20°C",
+          "min": 8.5,
+          "max": 15.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total (em ácido tartárico)",
+          "unit": "g/L",
+          "min": 3.5,
+          "max": null,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil (em ácido acético)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.08,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total - branco/rosé bio (açúcares < 2 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 150.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "SO₂ total - branco/rosé bio (açúcares ≥ 2 g/L)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 220.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Ocratoxina A",
+          "unit": "µg/kg",
+          "min": null,
+          "max": 2.0,
+          "method": "OIV-MA-AS315-10"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.1,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        }
+      ]
+    }
+  }
+}

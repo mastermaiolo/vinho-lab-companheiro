@@ -1,0 +1,636 @@
+{
+  "regulator": "MAPA - Ministério da Agricultura e Pecuária",
+  "regulatory_basis": [
+    "Lei nº 7.678/1988",
+    "Decreto nº 8.198/2014",
+    "IN MAPA nº 14/2018 (alterada pela Portaria nº 723/2024)",
+    "Resolução GMC nº 45/1996 - Regulamento Vitivinícola do MERCOSUL"
+  ],
+  "import_notes": "Para importação no Brasil é obrigatório: (1) Certificado de Origem do país produtor; (2) Boletim de análise emitido por laboratório credenciado pelo MAPA (ou aceite via acordo); (3) Registro do importador no MAPA; (4) Análise de controle no porto de entrada pode ser exigida. Vinhos com mais de 0,2 mg/L de chumbo ou 0,2 g/L de cloretos são rejeitados.",
+  "categories": {
+    "vinho_mesa_tinto": {
+      "label": "Vinho de mesa tinto",
+      "definition": "Vinho elaborado predominantemente de uvas americanas/híbridas, TAV 8,6-14%",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 8.6,
+          "max": 14.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "Sulfatos totais (em K₂SO₄)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS321-05A"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Cloretos (em NaCl)",
+          "unit": "g/L",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS321-02"
+        },
+        {
+          "name": "Cinzas",
+          "unit": "g/L",
+          "min": 1.5,
+          "max": null,
+          "method": "OIV-MA-AS2-04"
+        },
+        {
+          "name": "Extrato seco reduzido",
+          "unit": "g/L",
+          "min": 16.0,
+          "max": null,
+          "method": "OIV-MA-AS2-03B"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Relação álcool em peso/extrato seco reduzido",
+          "unit": "-",
+          "min": null,
+          "max": 4.8,
+          "method": "Cálculo"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "vinho_mesa_branco_rose": {
+      "label": "Vinho de mesa branco ou rosado",
+      "definition": "Vinho branco ou rosé de mesa, TAV 8,6-14%",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 8.6,
+          "max": 14.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "Sulfatos totais (em K₂SO₄)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS321-05A"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Cloretos (em NaCl)",
+          "unit": "g/L",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS321-02"
+        },
+        {
+          "name": "Cinzas",
+          "unit": "g/L",
+          "min": 1.3,
+          "max": null,
+          "method": "OIV-MA-AS2-04"
+        },
+        {
+          "name": "Extrato seco reduzido",
+          "unit": "g/L",
+          "min": 13.0,
+          "max": null,
+          "method": "OIV-MA-AS2-03B"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "vinho_fino_tinto": {
+      "label": "Vinho fino tinto (Vitis vinifera)",
+      "definition": "Vinho exclusivamente de V. vinifera, TAV 8,6-14%",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 8.6,
+          "max": 14.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "Sulfatos totais (em K₂SO₄)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS321-05A"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Cloretos (em NaCl)",
+          "unit": "g/L",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS321-02"
+        },
+        {
+          "name": "Cinzas",
+          "unit": "g/L",
+          "min": 1.5,
+          "max": null,
+          "method": "OIV-MA-AS2-04"
+        },
+        {
+          "name": "Extrato seco reduzido",
+          "unit": "g/L",
+          "min": 16.0,
+          "max": null,
+          "method": "OIV-MA-AS2-03B"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Relação álcool em peso/extrato seco reduzido",
+          "unit": "-",
+          "min": null,
+          "max": 4.8,
+          "method": "Cálculo"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "vinho_fino_branco_rose": {
+      "label": "Vinho fino branco ou rosado (Vitis vinifera)",
+      "definition": "Vinho branco/rosé exclusivamente de V. vinifera, TAV 8,6-14%",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 8.6,
+          "max": 14.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "Sulfatos totais (em K₂SO₄)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS321-05A"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Cloretos (em NaCl)",
+          "unit": "g/L",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS321-02"
+        },
+        {
+          "name": "Cinzas",
+          "unit": "g/L",
+          "min": 1.3,
+          "max": null,
+          "method": "OIV-MA-AS2-04"
+        },
+        {
+          "name": "Extrato seco reduzido",
+          "unit": "g/L",
+          "min": 13.0,
+          "max": null,
+          "method": "OIV-MA-AS2-03B"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 250.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "espumante": {
+      "label": "Espumante / Champanha (natural)",
+      "definition": "Pressão >= 4 atm a 20°C, obtida por segunda fermentação. TAV 10-13%.",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 10.0,
+          "max": 13.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Pressão a 20°C",
+          "unit": "atm",
+          "min": 4.0,
+          "max": null,
+          "method": "Manómetro afrómetro"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Cloretos (em NaCl)",
+          "unit": "g/L",
+          "min": null,
+          "max": 0.5,
+          "method": "OIV-MA-AS321-02"
+        },
+        {
+          "name": "Sulfatos totais (em K₂SO₄)",
+          "unit": "g/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS321-05A"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "vinho_frisante": {
+      "label": "Vinho frisante",
+      "definition": "Pressão 1,1 a 4 atm a 20°C, TAV 7-14%",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 7.0,
+          "max": 14.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Pressão a 20°C",
+          "unit": "atm",
+          "min": 1.1,
+          "max": 4.0,
+          "method": "Manómetro afrómetro"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "vinho_licoroso": {
+      "label": "Vinho licoroso",
+      "definition": "TAV 14-18%, com adição de álcool vínico ou aguardente vínica",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 14.0,
+          "max": 18.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Açúcar total (em glucose)",
+          "unit": "g/L",
+          "min": 20.0,
+          "max": null,
+          "method": "OIV-MA-AS311-01A"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 50.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS323-04B"
+        },
+        {
+          "name": "Cinzas",
+          "unit": "g/L",
+          "min": 1.5,
+          "max": null,
+          "method": "OIV-MA-AS2-04"
+        },
+        {
+          "name": "Extrato seco reduzido",
+          "unit": "g/L",
+          "min": 16.0,
+          "max": null,
+          "method": "OIV-MA-AS2-03B"
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        }
+      ]
+    },
+    "vinho_organico": {
+      "label": "Vinho orgânico (Brasil)",
+      "definition": "Vinho certificado segundo a Lei nº 10.831/2003 e IN MAPA nº 19/2009. Equivale aos demais vinhos com SO₂ máximo reduzido.",
+      "parameters": [
+        {
+          "name": "Graduação alcoólica (TAV)",
+          "unit": "% v/v a 20°C",
+          "min": 8.6,
+          "max": 14.0,
+          "method": "OIV-MA-AS312-01A"
+        },
+        {
+          "name": "Acidez total",
+          "unit": "meq/L",
+          "min": 55.0,
+          "max": 130.0,
+          "method": "OIV-MA-AS313-01"
+        },
+        {
+          "name": "Acidez volátil",
+          "unit": "meq/L",
+          "min": null,
+          "max": 20.0,
+          "method": "OIV-MA-AS313-02"
+        },
+        {
+          "name": "SO₂ total (orgânico)",
+          "unit": "mg/L",
+          "min": null,
+          "max": 100.0,
+          "method": "OIV-MA-AS323-04B",
+          "note": "Limite mais restritivo; alguns certificadores aceitam até 150 mg/L em brancos."
+        },
+        {
+          "name": "Metanol",
+          "unit": "mg/L",
+          "min": null,
+          "max": 350.0,
+          "method": "OIV-MA-AS312-03A"
+        },
+        {
+          "name": "Cobre",
+          "unit": "mg/L",
+          "min": null,
+          "max": 1.0,
+          "method": "OIV-MA-AS322-06"
+        },
+        {
+          "name": "Chumbo",
+          "unit": "mg/L",
+          "min": null,
+          "max": 0.2,
+          "method": "OIV-MA-AS322-12"
+        },
+        {
+          "name": "Resíduos de pesticidas sintéticos",
+          "unit": "—",
+          "min": null,
+          "max": 0.0,
+          "method": "Multirresíduos GC-MS/MS, LC-MS/MS",
+          "note": "Ausência obrigatória."
+        }
+      ]
+    }
+  }
+}

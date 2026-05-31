@@ -1,0 +1,458 @@
+{
+  "OIV-MA-AS312-01A": {
+    "name": "Título alcoométrico volúmico (TAV) por destilação e densimetria",
+    "principle": "Destilação simples do vinho com captação do destilado num matraz aferido, seguida de determinação da densidade do destilado a 20 °C por densímetro electrónico ou picnómetro. A massa volúmica do destilado é convertida em TAV usando a tabela oficial OIV.",
+    "equipment": [
+      "Destilador de vinho tipo Cazenave-Ferré ou destilador a vapor automático",
+      "Densímetro electrónico (precisão 0,0001 g/cm³) ou picnómetro de 50 mL",
+      "Balança analítica (precisão 0,0001 g)",
+      "Banho termostatizado a 20,0 ± 0,1 °C"
+    ],
+    "reagents": [
+      "Leite de cal (Ca(OH)₂ a 120 g/L) para neutralizar acidez volátil",
+      "Água ultrapura"
+    ],
+    "procedure": [
+      "Medir 200,0 mL de vinho num balão volumétrico a 20 °C.",
+      "Transferir para o balão de destilação e juntar 10 mL de leite de cal.",
+      "Destilar recolhendo cerca de 3/4 do volume inicial num balão aferido de 200 mL imerso em água fria.",
+      "Completar até 200 mL com água destilada a 20 °C e homogeneizar.",
+      "Levar o destilado ao banho termostático e estabilizar a 20,0 °C.",
+      "Medir a densidade relativa (d 20/20) por densímetro electrónico.",
+      "Consultar a tabela oficial OIV para converter densidade em % vol."
+    ],
+    "calculation": "TAV (% vol) lido directamente da tabela OIV em função de d 20/20.",
+    "precision": "Repetibilidade r ≤ 0,10 % vol; Reprodutibilidade R ≤ 0,19 % vol",
+    "regulatory_acceptance": "Método oficial OIV, aceite pela UE (Reg. 2019/934) e pelo MERCOSUL."
+  },
+  "OIV-MA-AS313-01": {
+    "name": "Acidez total por titulação potenciométrica",
+    "principle": "Neutralização dos ácidos do vinho com solução de hidróxido de sódio até pH 7,0, após eliminação do CO₂. Resultado expresso em g/L de ácido tartárico (UE) ou meq/L (Brasil).",
+    "equipment": [
+      "Potenciómetro com eléctrodo combinado de vidro, calibrado com tampões pH 4,01 e 7,00",
+      "Bureta automática de 25 mL (precisão 0,01 mL) ou titulador automático",
+      "Agitador magnético",
+      "Bomba de vácuo ou ultrassons para desgaseificação"
+    ],
+    "reagents": [
+      "NaOH 0,1 mol/L padronizada (rigorosamente aferida com biftalato de potássio)",
+      "Água destilada isenta de CO₂"
+    ],
+    "procedure": [
+      "Desgaseificar 50 mL de vinho sob vácuo durante 1-2 minutos (ou em ultrassons).",
+      "Pipetar 10,0 mL de vinho desgaseificado para um copo de 100 mL.",
+      "Adicionar 10 mL de água destilada isenta de CO₂.",
+      "Imergir o eléctrodo e iniciar a agitação suave.",
+      "Titular com NaOH 0,1 mol/L até pH = 7,00 ± 0,05.",
+      "Registar o volume V (mL) gasto."
+    ],
+    "calculation": "Acidez total (g/L em ác. tartárico) = (V × N × 75) / 10\nAcidez total (meq/L) = (V × N × 1000) / 10\nonde V = volume NaOH gasto (mL); N = molaridade da NaOH (mol/L); 75 = ½ da massa molar do ácido tartárico.",
+    "precision": "r ≤ 0,07 g/L; R ≤ 0,13 g/L (expresso em ácido tartárico)",
+    "regulatory_acceptance": "Método OIV oficial. PT/UE expressa em ác. tartárico; BR em meq/L."
+  },
+  "OIV-MA-AS313-02": {
+    "name": "Acidez volátil por arrastamento de vapor (método Cazenave-Ferré)",
+    "principle": "Os ácidos voláteis (essencialmente acético) são arrastados por uma corrente de vapor de água, condensados e titulados com solução alcalina. Faz-se correcção para o SO₂ livre e combinado que também destila.",
+    "equipment": [
+      "Aparelho de Cazenave-Ferré com gerador de vapor",
+      "Bureta de 10 mL (precisão 0,02 mL)",
+      "Material vidro corrente"
+    ],
+    "reagents": [
+      "NaOH 0,1 mol/L padronizada",
+      "Ácido tartárico cristalizado",
+      "Solução de iodo 0,005 mol/L",
+      "Solução saturada de borato de sódio",
+      "Fenolftaleína 1% em etanol",
+      "Amido 5 g/L"
+    ],
+    "procedure": [
+      "Introduzir 20,0 mL de vinho no balão do aparelho e adicionar 0,5 g de ácido tartárico.",
+      "Aquecer o gerador de vapor e arrastar até obter 250 mL de destilado.",
+      "Aquecer ligeiramente o destilado para eliminar CO₂.",
+      "Adicionar 2 gotas de fenolftaleína e titular com NaOH 0,1 mol/L (volume V₁).",
+      "Adicionar 2 gotas de HCl diluído e 5 mL de amido; titular SO₂ livre com iodo (V₂).",
+      "Adicionar borato saturado em excesso e titular SO₂ combinado com iodo (V₃)."
+    ],
+    "calculation": "Acidez volátil (g/L ác. acético) = (V₁ × 0,1 × 60 / 20) − (0,1 × V₂ × 32 / 20 × 0,001) − (0,05 × V₃ × 32 / 20 × 0,001)\nSimplificado para vinhos secos: AV (g/L) ≈ V₁ × 0,30\nAcidez volátil (meq/L) = AV (g/L) × 16,67",
+    "precision": "r ≤ 0,03 g/L; R ≤ 0,06 g/L (em ácido acético)",
+    "regulatory_acceptance": "Método OIV oficial. Limite UE: 1,2 g/L tinto, 1,08 g/L branco/rosé. BR: 20 meq/L."
+  },
+  "OIV-MA-AS323-04B": {
+    "name": "Dióxido de enxofre (SO₂) livre e total por método de Paul (aspiração-titulação)",
+    "principle": "O SO₂ livre é arrastado por uma corrente de ar para uma solução de peróxido de hidrogénio onde é oxidado a sulfato; o ácido sulfúrico formado é titulado com NaOH. O SO₂ total inclui a fracção combinada, libertada por aquecimento prévio em meio alcalino.",
+    "equipment": [
+      "Aparelho de aspiração de Paul com balão de 100 mL e condensador",
+      "Bomba de vácuo regulável",
+      "Bureta de 10 mL (0,02 mL)",
+      "Banho de aquecimento"
+    ],
+    "reagents": [
+      "H₂SO₄ 25% (v/v) — para libertar o SO₂",
+      "NaOH 4 mol/L — para hidrólise dos combinados",
+      "H₂O₂ 0,3% (v/v) recém-preparada",
+      "NaOH 0,01 mol/L padronizada",
+      "Indicador misto vermelho de metilo + verde de bromocresol"
+    ],
+    "procedure": [
+      "SO₂ livre: 20,0 mL de vinho + 10 mL H₂SO₄ 25% no balão; aspirar a frio durante 15 min.",
+      "Titular o conteúdo do tubo receptor (H₂O₂ + indicador) com NaOH 0,01 mol/L até viragem para verde. Volume V_livre.",
+      "SO₂ total: nova amostra de 20 mL; adicionar 5 mL NaOH 4 mol/L, deixar reagir 15 min a frio.",
+      "Acidificar com 10 mL H₂SO₄ 25% e aspirar a quente (≥ 100 °C) durante 20 min.",
+      "Titular como acima. Volume V_total."
+    ],
+    "calculation": "SO₂ (mg/L) = V × N × 32 × 1000 / V_amostra\nPara V em mL, N = 0,01 mol/L, V_amostra = 20 mL → SO₂ (mg/L) = V × 16",
+    "precision": "r ≤ 5 mg/L (livre); r ≤ 8 mg/L (total)",
+    "regulatory_acceptance": "Método OIV oficial. Método de Ripper é aceite apenas para autocontrolo, não para boletins oficiais."
+  },
+  "OIV-MA-AS2-03B": {
+    "name": "Extracto seco total e reduzido por densimetria",
+    "principle": "Cálculo indirecto a partir da densidade do vinho desalcoolizado (obtida na destilação para TAV). Permite obter extracto seco total. O extracto seco reduzido obtém-se subtraindo os açúcares redutores que excedem 1 g/L.",
+    "equipment": [
+      "Densímetro electrónico ou picnómetro",
+      "Balão volumétrico"
+    ],
+    "reagents": [],
+    "procedure": [
+      "Após destilação para determinação do TAV, recuperar o resíduo no balão de destilação.",
+      "Transferir para balão aferido e completar com água destilada até ao volume original.",
+      "Medir a densidade do líquido a 20 °C.",
+      "Consultar tabela OIV para obter extracto seco total (g/L)."
+    ],
+    "calculation": "Extracto seco total: ler da tabela OIV em função de d 20/20 do resíduo.\nExtracto seco reduzido (g/L) = Extracto seco total − (Açúcares redutores − 1) se açúcares > 1 g/L.",
+    "precision": "r ≤ 0,5 g/L; R ≤ 1,0 g/L",
+    "regulatory_acceptance": "Método OIV oficial. Brasil utiliza extracto seco reduzido (IN 14/2018)."
+  },
+  "OIV-MA-AS2-04": {
+    "name": "Cinzas por incineração",
+    "principle": "Evaporação de 20 mL de vinho e incineração do resíduo a 525 ± 25 °C até peso constante. Determinação gravimétrica do resíduo mineral.",
+    "equipment": [
+      "Mufla regulável até 600 °C",
+      "Cápsulas de platina ou porcelana",
+      "Balança analítica (0,0001 g)",
+      "Banho-maria"
+    ],
+    "reagents": [],
+    "procedure": [
+      "Tarar a cápsula previamente incinerada.",
+      "Pipetar 20,0 mL de vinho para a cápsula.",
+      "Evaporar em banho-maria até secura.",
+      "Carbonizar lentamente em bico de Bunsen ou placa.",
+      "Levar à mufla a 525 °C até peso constante (cerca de 3-4 h).",
+      "Arrefecer em exsicador e pesar."
+    ],
+    "calculation": "Cinzas (g/L) = (m_cinzas / 20) × 1000 = m_cinzas × 50, em gramas",
+    "precision": "r ≤ 0,05 g/L",
+    "regulatory_acceptance": "Método OIV oficial. Limites BR: 1,5 g/L tinto, 1,3 g/L branco/rosé."
+  },
+  "OIV-MA-AS311-01A": {
+    "name": "Açúcares redutores pelo método de Luff-Schoorl",
+    "principle": "Reacção dos açúcares redutores com solução cuproalcalina (sulfato de cobre + tartarato sódio-potássio), redução do Cu²⁺ a Cu₂O. O excesso de Cu²⁺ é doseado por iodometria.",
+    "equipment": [
+      "Refluxo com condensador",
+      "Bureta de 25 mL",
+      "Balão Erlenmeyer 300 mL"
+    ],
+    "reagents": [
+      "Solução de Luff-Schoorl (CuSO₄·5H₂O + ácido cítrico + Na₂CO₃)",
+      "KI 30%",
+      "H₂SO₄ 25%",
+      "Tiossulfato de sódio 0,1 mol/L",
+      "Amido 1%"
+    ],
+    "procedure": [
+      "Em vinho seco, diluir 10× se açúcares > 5 g/L; nos doces diluir 25× ou 50×.",
+      "Pipetar 25 mL da solução de Luff-Schoorl + 25 mL da amostra diluída no Erlenmeyer.",
+      "Aquecer até fervura (3 min) e refluxar 10 min.",
+      "Arrefecer rapidamente em água fria.",
+      "Adicionar 10 mL KI 30% e 25 mL H₂SO₄ 25% com cuidado.",
+      "Titular o iodo libertado com tiossulfato 0,1 mol/L; antes do fim adicionar amido como indicador.",
+      "Fazer prova em branco com 25 mL água em vez de amostra."
+    ],
+    "calculation": "Açúcares (g/L) = ((V_branco − V_amostra) × factor × 1000) / V_amostra_mL\nFactor obtido da tabela Luff-Schoorl em função do volume gasto.",
+    "precision": "r ≤ 0,3 g/L para vinhos secos; r ≤ 2 g/L para vinhos doces",
+    "regulatory_acceptance": "Método OIV. Alternativa moderna: enzimático (D-glucose + D-frutose) por kit."
+  },
+  "OIV-MA-AS312-03A": {
+    "name": "Metanol por cromatografia gasosa (GC-FID)",
+    "principle": "Injecção directa do destilado do vinho em GC com detector de ionização de chama. Quantificação por padrão interno (geralmente 4-metil-2-pentanol ou n-pentanol).",
+    "equipment": [
+      "Cromatógrafo gasoso com FID",
+      "Coluna capilar polar (ex: CP-Wax 57 CB, 50 m × 0,32 mm)",
+      "Seringa de injecção 1-10 µL"
+    ],
+    "reagents": [
+      "Padrão de metanol grau cromatográfico",
+      "Padrão interno (4-metil-2-pentanol)",
+      "Etanol absoluto"
+    ],
+    "procedure": [
+      "Preparar destilado do vinho conforme método TAV.",
+      "Adicionar volume conhecido de padrão interno ao destilado.",
+      "Injectar 1 µL com split 1:30 a 200 °C; coluna 40 °C (2 min) → 200 °C a 8 °C/min.",
+      "FID a 250 °C, gás de arrastamento He a 1 mL/min.",
+      "Calcular a partir de curva de calibração de 5 pontos (50-500 mg/L)."
+    ],
+    "calculation": "Metanol (mg/L) = (Área_metanol / Área_PI) × factor_resposta × concentração_PI",
+    "precision": "r ≤ 5 mg/L; R ≤ 12 mg/L",
+    "regulatory_acceptance": "Método OIV. Limite UE: 250 mg/L branco/rosé, 400 mg/L tinto. BR: 250-350 mg/L."
+  },
+  "OIV-MA-AS322-06": {
+    "name": "Cobre por espectrometria de absorção atómica (FAAS)",
+    "principle": "Atomização da amostra (acidificada e diluída) em chama ar-acetileno e medição da absorvância a 324,7 nm. Quantificação por curva de calibração.",
+    "equipment": [
+      "Espectrómetro de absorção atómica com chama ar-acetileno",
+      "Lâmpada de cátodo oco de cobre"
+    ],
+    "reagents": [
+      "Padrão certificado de cobre 1000 mg/L",
+      "HNO₃ 65% Suprapur®",
+      "Água ultrapura"
+    ],
+    "procedure": [
+      "Diluir 10 mL de vinho em 100 mL com HNO₃ 0,5% (v/v).",
+      "Preparar curva de calibração 0; 0,2; 0,5; 1,0; 2,0 mg/L em matriz idêntica.",
+      "Medir absorvância a 324,7 nm com chama ar-acetileno em condições padrão.",
+      "Verificar com material de referência certificado."
+    ],
+    "calculation": "Cu (mg/L) = leitura × factor de diluição",
+    "precision": "r ≤ 0,05 mg/L; LD ≈ 0,02 mg/L",
+    "regulatory_acceptance": "Método OIV. Limite UE e BR: 1,0 mg/L."
+  },
+  "OIV-MA-AS322-12": {
+    "name": "Chumbo por ICP-MS",
+    "principle": "A amostra digerida é aspirada para plasma de árgon a ~7000 K; o Pb é ionizado e os iões são separados e quantificados por espectrometria de massa. Permite atingir limites de detecção de µg/L.",
+    "equipment": [
+      "ICP-MS (quadrupolo ou triplo quadrupolo)",
+      "Sistema de digestão por micro-ondas",
+      "Material PFA / quartzo isento de metais"
+    ],
+    "reagents": [
+      "HNO₃ 65% Ultrapur® / Suprapur®",
+      "H₂O₂ 30% Suprapur®",
+      "Solução multi-elementar certificada",
+      "Padrão interno (²⁰⁹Bi ou ¹¹⁵In)"
+    ],
+    "procedure": [
+      "Digestão por micro-ondas: 1 mL vinho + 5 mL HNO₃ + 1 mL H₂O₂, programa 180 °C/15 min.",
+      "Diluir digerido a 25 mL com água ultrapura.",
+      "Calibração externa 0,1 a 50 µg/L com padrão interno.",
+      "Monitorizar isótopos ²⁰⁸Pb e ²⁰⁷Pb; corrigir com Bi.",
+      "Validar com material de referência (ex: BCR-414, BCR-191)."
+    ],
+    "calculation": "Pb (mg/L) = (intensidade_amostra / intensidade_padrão) × concentração × factor_diluição",
+    "precision": "LD ≤ 0,001 mg/L; r ≤ 5%",
+    "regulatory_acceptance": "Método OIV. Reg. UE 2023/915: 0,10 mg/L (vinho), 0,15 (licoroso). BR: 0,2 mg/L."
+  },
+  "OIV-MA-AS314-01": {
+    "name": "Sobrepressão de CO₂ em espumantes por afrómetro",
+    "principle": "Medição directa da pressão do CO₂ no espaço de cabeça da garrafa a 20 °C, após equilíbrio térmico, com manómetro perfurador (afrómetro).",
+    "equipment": [
+      "Afrómetro com manómetro calibrado (0-10 bar, resolução 0,1 bar)",
+      "Banho termostatizado a 20,0 ± 0,1 °C"
+    ],
+    "reagents": [],
+    "procedure": [
+      "Estabilizar a garrafa em banho a 20 °C durante pelo menos 1 hora.",
+      "Agitar suavemente para equilibrar o CO₂ entre líquido e gás.",
+      "Fixar o afrómetro à cápsula da garrafa.",
+      "Perfurar a cápsula e ler a pressão estabilizada.",
+      "Registar como sobrepressão (bar)."
+    ],
+    "calculation": "Sobrepressão (bar) = leitura directa do manómetro",
+    "precision": "r ≤ 0,1 bar",
+    "regulatory_acceptance": "Método OIV. Mínimo 3,5 bar (espumante qualidade UE), 4 atm (espumante BR)."
+  },
+  "OIV-MA-AS315-10": {
+    "name": "Ocratoxina A por HPLC com detector de fluorescência",
+    "principle": "Extracção da OTA em coluna de imunoafinidade, eluição com metanol/ácido acético, separação por HPLC em coluna C18 e detecção por fluorescência (λex 333 nm / λem 460 nm).",
+    "equipment": [
+      "HPLC com detector de fluorescência",
+      "Coluna C18 (150 × 4,6 mm, 5 µm)",
+      "Colunas de imunoafinidade específicas para OTA",
+      "Material vidro corrente"
+    ],
+    "reagents": [
+      "Tampão fosfato salino (PBS) pH 7,4",
+      "Metanol grau HPLC",
+      "Ácido acético glacial",
+      "Padrão certificado OTA"
+    ],
+    "procedure": [
+      "Filtrar 10 mL de vinho e diluir com 10 mL PBS.",
+      "Passar a 1 mL/min pela coluna de imunoafinidade.",
+      "Lavar coluna com 10 mL PBS + 10 mL água.",
+      "Eluir OTA com 4 mL metanol:ác. acético (98:2).",
+      "Evaporar a seco em N₂, redissolver em 500 µL fase móvel.",
+      "Injectar 100 µL em HPLC; fase móvel acetonitrilo:água:ác. acético (49,5:49,5:1).",
+      "Quantificar por curva de calibração 0,1-10 µg/L."
+    ],
+    "calculation": "OTA (µg/kg) = (Área / declive) × volume_final / volume_amostra × factor",
+    "precision": "LQ ≤ 0,2 µg/kg; r ≤ 20%",
+    "regulatory_acceptance": "Método OIV. Limite Reg. UE 2023/915: 2,0 µg/kg para vinho e vinho aromatizado."
+  },
+  "OIV-MA-AS321-02": {
+    "name": "Cloretos por titulação potenciométrica (método de Mohr modificado)",
+    "principle": "Os iões cloreto reagem com nitrato de prata formando AgCl insolúvel. O ponto final é detectado potenciometricamente com eléctrodo de prata.",
+    "equipment": [
+      "Potenciómetro com eléctrodo de prata e referência",
+      "Bureta de 10 mL"
+    ],
+    "reagents": [
+      "AgNO₃ 0,1 mol/L padronizada",
+      "HNO₃ concentrado"
+    ],
+    "procedure": [
+      "Pipetar 25 mL de vinho para copo titulação.",
+      "Acidificar com 5 mL HNO₃ concentrado.",
+      "Titular com AgNO₃ 0,1 mol/L sob agitação até inflexão da curva potencial vs volume."
+    ],
+    "calculation": "Cloretos (g/L NaCl) = V × N × 58,44 / V_amostra",
+    "precision": "r ≤ 0,02 g/L",
+    "regulatory_acceptance": "Método OIV. Limite BR: 0,5 g/L em NaCl."
+  },
+  "OIV-MA-AS321-05A": {
+    "name": "Sulfatos por gravimetria (precipitação com bário)",
+    "principle": "Os iões sulfato são precipitados como BaSO₄ insolúvel em meio ácido. O precipitado é filtrado, calcinado e pesado.",
+    "equipment": [
+      "Mufla 800 °C",
+      "Cadinho de porcelana",
+      "Banho-maria",
+      "Funil de filtração com papel de cinzas conhecidas"
+    ],
+    "reagents": [
+      "BaCl₂ 10% (m/v)",
+      "HCl concentrado"
+    ],
+    "procedure": [
+      "Pipetar 50 mL de vinho num copo de 250 mL.",
+      "Acidificar com 5 mL HCl e aquecer até ebulição.",
+      "Adicionar gota a gota 20 mL de BaCl₂ 10% sob agitação.",
+      "Manter em digestão a 90 °C durante 1 h.",
+      "Filtrar, lavar até ausência de Cl⁻ (teste com AgNO₃).",
+      "Secar, calcinar a 800 °C, pesar."
+    ],
+    "calculation": "Sulfatos (g/L K₂SO₄) = m_BaSO₄ × 0,7464 / V_amostra × 1000",
+    "precision": "r ≤ 0,05 g/L",
+    "regulatory_acceptance": "Método OIV/MAPA. Limite BR: 1,0 g/L (1,5 para envelhecidos)."
+  },
+  "Cálculo": {
+    "name": "Cálculo - Relação álcool em peso / extracto seco reduzido",
+    "principle": "Cálculo a partir de TAV e ESR já determinados, para detectar diluições.",
+    "equipment": [],
+    "reagents": [],
+    "procedure": [
+      "Determinar TAV (% vol) por OIV-MA-AS312-01A.",
+      "Calcular álcool em peso (g/L) = TAV × 0,7913 × 10.",
+      "Determinar extracto seco reduzido (g/L) por OIV-MA-AS2-03B.",
+      "Dividir álcool em peso por ESR."
+    ],
+    "calculation": "Relação = (TAV × 7,913) / ESR; valor ≤ 4,8 para vinho tinto não diluído (BR)",
+    "precision": "Depende dos métodos de origem",
+    "regulatory_acceptance": "Método de cálculo MAPA (IN 14/2018) - marcador de adulteração por diluição."
+  },
+  "Manómetro afrómetro": {
+    "name": "Pressão por afrómetro perfurante (espumantes - método MAPA)",
+    "principle": "Equivalente ao OIV-MA-AS314-01.",
+    "equipment": [
+      "Afrómetro calibrado",
+      "Banho a 20 °C"
+    ],
+    "reagents": [],
+    "procedure": [
+      "Estabilizar a 20 °C durante 1 h.",
+      "Fixar o afrómetro e perfurar a cápsula.",
+      "Ler a pressão em atm (1 atm = 1,01325 bar)."
+    ],
+    "calculation": "Pressão (atm) = leitura directa",
+    "precision": "± 0,1 atm",
+    "regulatory_acceptance": "MAPA. Espumante: ≥ 4 atm; Frisante: 1,1-4 atm."
+  },
+  "OIV-MA-AS322-05": {
+    "name": "Ferro por espectrometria de absorção atómica",
+    "principle": "Atomização em chama ar-acetileno e medição a 248,3 nm.",
+    "equipment": [
+      "FAAS com lâmpada de Fe"
+    ],
+    "reagents": [
+      "Padrão Fe 1000 mg/L",
+      "HNO₃ Suprapur®"
+    ],
+    "procedure": [
+      "Diluir 10 mL vinho em 50 mL com HNO₃ 0,5%.",
+      "Calibração 0-10 mg/L.",
+      "Medir absorvância a 248,3 nm."
+    ],
+    "calculation": "Fe (mg/L) = leitura × factor diluição",
+    "precision": "r ≤ 0,2 mg/L",
+    "regulatory_acceptance": "Método OIV. Sem limite legal mas >10 mg/L = risco de casse férrica."
+  },
+  "OIV-MA-AS322-07": {
+    "name": "Cádmio por ICP-MS ou GFAAS",
+    "principle": "Determinação por ICP-MS (isótopo ¹¹¹Cd ou ¹¹⁴Cd) ou GFAAS a 228,8 nm.",
+    "equipment": [
+      "ICP-MS ou GFAAS"
+    ],
+    "reagents": [
+      "HNO₃ Suprapur®",
+      "Modificador matricial NH₄H₂PO₄ (se GFAAS)"
+    ],
+    "procedure": [
+      "Digestão idêntica à do chumbo.",
+      "ICP-MS: monitorizar ¹¹¹Cd com padrão interno ¹⁰³Rh.",
+      "Validar com material de referência."
+    ],
+    "calculation": "Cd (mg/L) por interpolação na curva",
+    "precision": "LD ≤ 0,0005 mg/L",
+    "regulatory_acceptance": "Método OIV. Reg. UE 2023/915: 0,01 mg/L."
+  },
+  "OIV-MA-AS323-01": {
+    "name": "Arsénio por ICP-MS / HG-AAS",
+    "principle": "ICP-MS (isótopo ⁷⁵As com célula de colisão) ou geração de hidretos AAS.",
+    "equipment": [
+      "ICP-MS ou HG-AAS"
+    ],
+    "reagents": [
+      "HNO₃ Suprapur®",
+      "NaBH₄ 0,4% (se HG)"
+    ],
+    "procedure": [
+      "Digestão como para Pb.",
+      "ICP-MS com modo KED (He) para eliminar interferência ⁴⁰Ar³⁵Cl⁺.",
+      "Calibração 0,1 a 50 µg/L."
+    ],
+    "calculation": "As (mg/L) por curva de calibração",
+    "precision": "LD ≤ 0,002 mg/L",
+    "regulatory_acceptance": "Método OIV. Limite OIV/UE: 0,2 mg/L."
+  },
+  "Multirresíduos GC-MS/MS, LC-MS/MS": {
+    "name": "Pesquisa de resíduos de pesticidas — multirresíduos QuEChERS + GC-MS/MS e LC-MS/MS",
+    "principle": "Extração por método QuEChERS (Quick, Easy, Cheap, Effective, Rugged, Safe) com acetonitrilo e sais; partição e clean-up dispersivo. Análise por cromatografia gasosa e líquida acopladas a espectrometria de massas em tandem (GC-MS/MS para pesticidas organoclorados, organofosforados, piretróides; LC-MS/MS para compostos polares e termolábeis).",
+    "equipment": [
+      "GC-MS/MS (triplo quadrupolo) com coluna DB-5MS ou equivalente",
+      "LC-MS/MS (triplo quadrupolo) com coluna C18",
+      "Kit QuEChERS (sais MgSO₄, NaCl, citratos, PSA)",
+      "Centrifugadora 4000 rpm",
+      "Sistema de evaporação por N₂"
+    ],
+    "reagents": [
+      "Acetonitrilo grau HPLC-MS",
+      "Sais QuEChERS",
+      "Padrões certificados multipesticidas",
+      "Padrão interno (trifenilfosfato, TPP)"
+    ],
+    "procedure": [
+      "10 mL de vinho + 10 mL acetonitrilo + sais QuEChERS (MgSO₄/NaCl/citratos).",
+      "Agitar 1 min, centrifugar a 4000 rpm/5 min.",
+      "Clean-up dispersivo do sobrenadante com 150 mg PSA + 900 mg MgSO₄.",
+      "Centrifugar; tomar 5 mL do sobrenadante final.",
+      "Para GC-MS/MS: injetar 1 µL em modo splitless a 280 °C.",
+      "Para LC-MS/MS: diluir 1:1 em água ultrapura, injetar 5 µL.",
+      "Quantificar por curva de calibração matricial 0,005-0,5 mg/kg.",
+      "Verificar com material de referência certificado."
+    ],
+    "calculation": "Concentração (mg/L) = (Área_amostra / Área_PI) × C_PI × factor_diluição / recuperação. Para vinhos biológicos a expressão é: 'Não detetado' (< LQ).",
+    "precision": "LD 0,001-0,005 mg/kg; LQ 0,01 mg/kg; recuperação 70-120%",
+    "regulatory_acceptance": "Métodos baseados em SANTE/12682/2019 (UE) e na IN MAPA nº 19/2009 para orgânicos. Para vinhos biológicos UE/BR exige-se ausência (< LQ) de pesticidas sintéticos."
+  }
+}

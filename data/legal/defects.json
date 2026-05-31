@@ -1,0 +1,58 @@
+{
+  "TCA / Cheiro a rolha": {
+    "compostos": "2,4,6-tricloroanisol (TCA), 2,4,6-tribromoanisol",
+    "limite_perceção": "1,5–4 ng/L (limiar humano)",
+    "descricao": "Cheiro a cartão molhado, cave húmida, jornal velho. Disfarça os aromas frutados.",
+    "origem": "Contaminação por rolha defeituosa ou ambiente da adega.",
+    "deteção_laboratorial": "SPME-GC-MS (limite 0,5 ng/L)"
+  },
+  "Brettanomyces / 4-EP, 4-EG": {
+    "compostos": "4-etilfenol (4-EP), 4-etilguaiacol (4-EG)",
+    "limite_perceção": "230 µg/L (4-EP em vinho tinto)",
+    "descricao": "Suor de cavalo, cavalariça, especiarias farmacêuticas, plástico queimado.",
+    "origem": "Levedura Brettanomyces bruxellensis em barricas mal sanitizadas, vinhos com SO₂ livre baixo, pH > 3,7.",
+    "deteção_laboratorial": "GC-MS para 4-EP/4-EG; qPCR para Brettanomyces."
+  },
+  "Acidez volátil / Picado acético": {
+    "compostos": "Ácido acético, acetato de etilo",
+    "limite_perceção": "0,7–0,9 g/L de ácido acético",
+    "descricao": "Cheiro a vinagre, esmalte de unhas (acetato de etilo).",
+    "origem": "Bactérias acéticas (Acetobacter), oxidação excessiva, SO₂ livre baixo.",
+    "deteção_laboratorial": "Método Cazenave-Ferré (OIV-MA-AS313-02)."
+  },
+  "Oxidação": {
+    "compostos": "Acetaldeído, sotolon",
+    "limite_perceção": "100 mg/L acetaldeído",
+    "descricao": "Em brancos: cor dourada/âmbar precoce, aromas a maçã madura, noz, caramelo. Em tintos: cor tijolada precoce, perda de fruta.",
+    "origem": "Exposição prolongada ao oxigénio, SO₂ insuficiente.",
+    "deteção_laboratorial": "Enzimático para acetaldeído; cor por CIELab."
+  },
+  "Redução / Sulfuretos": {
+    "compostos": "H₂S, mercaptanos (metanotiol, etanotiol)",
+    "limite_perceção": "1,1 µg/L (H₂S), 0,5 µg/L (etanotiol)",
+    "descricao": "Ovo podre, alho, cebola, borracha queimada, repolho.",
+    "origem": "Stress da levedura por falta de azoto durante a fermentação, armazenamento sem oxigénio em garrafa.",
+    "deteção_laboratorial": "GC-PFPD, teste do cobre (CuSO₄ 1%)."
+  },
+  "Light strike / Vinho enjoado pela luz": {
+    "compostos": "Dimetildissulfureto (DMDS), metanotiol",
+    "limite_perceção": "Variável",
+    "descricao": "Repolho cozido, lã molhada — aparece em brancos/espumantes expostos a luz UV em garrafa transparente.",
+    "origem": "Fotodegradação de aminoácidos sulfurados; potenciada por riboflavina.",
+    "deteção_laboratorial": "GC-MS"
+  },
+  "Geosmina / Mofo": {
+    "compostos": "Geosmina, 2-metilisoborneol",
+    "limite_perceção": "0,05 µg/L",
+    "descricao": "Terra molhada, beterraba crua, mofo.",
+    "origem": "Uvas com Botrytis ou Penicillium, ambiente fúngico na adega.",
+    "deteção_laboratorial": "SPME-GC-MS"
+  },
+  "Acetato de etilo (excesso)": {
+    "compostos": "Acetato de etilo",
+    "limite_perceção": "150-200 mg/L",
+    "descricao": "Verniz, solvente, cola.",
+    "origem": "Bactérias acéticas, leveduras não-Saccharomyces.",
+    "deteção_laboratorial": "GC-FID"
+  }
+}
