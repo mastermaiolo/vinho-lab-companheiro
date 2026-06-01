@@ -36,6 +36,8 @@ const pt: Dict = {
   "page.sample": "Amostra / Vinho",
   "page.lot": "Lote",
   "page.responsible": "Responsável",
+  "page.date": "Data da análise",
+  "page.tabsLabel": "Secções da análise",
   "page.toolbarHint": "Guarde ou retome o trabalho — tudo no seu navegador, sem servidor.",
   "page.chemIntro":
     "Introduza os dados brutos. Onde os regimes usam unidades diferentes, escolha a unidade em que mediu — a conversão é automática. As etiquetas BR / PT-UE indicam que regimes usam cada parâmetro.",
@@ -55,6 +57,7 @@ const pt: Dict = {
 
   "field.computed": "calculado",
   "field.auxiliar": "auxiliar",
+  "field.unit": "unidade",
   "field.notEvaluated": "— não avaliado —",
   "field.absent": "Ausente",
   "field.present": "Presente",
@@ -113,6 +116,7 @@ const pt: Dict = {
   "result.downloadMd": "Descarregar Markdown (.md)",
   "result.downloadPdf": "Descarregar PDF",
   "result.generatingPdf": "A gerar PDF…",
+  "result.pdfError": "Não foi possível gerar o PDF: {msg}",
 
   "status.Conforme": "Conforme",
   "status.Não conforme": "Não conforme",
@@ -145,6 +149,8 @@ const en: Dict = {
   "page.sample": "Sample / Wine",
   "page.lot": "Lot",
   "page.responsible": "Analyst",
+  "page.date": "Analysis date",
+  "page.tabsLabel": "Analysis sections",
   "page.toolbarHint": "Save or resume your work — all in your browser, no server.",
   "page.chemIntro":
     "Enter the raw data. Where the regimes use different units, choose the unit you measured in — conversion is automatic. The BR / PT-EU tags show which regimes use each parameter.",
@@ -164,6 +170,7 @@ const en: Dict = {
 
   "field.computed": "calculated",
   "field.auxiliar": "auxiliary",
+  "field.unit": "unit",
   "field.notEvaluated": "— not assessed —",
   "field.absent": "Absent",
   "field.present": "Present",
@@ -222,6 +229,7 @@ const en: Dict = {
   "result.downloadMd": "Download Markdown (.md)",
   "result.downloadPdf": "Download PDF",
   "result.generatingPdf": "Generating PDF…",
+  "result.pdfError": "Could not generate the PDF: {msg}",
 
   "status.Conforme": "Compliant",
   "status.Não conforme": "Non-compliant",
@@ -254,6 +262,8 @@ const es: Dict = {
   "page.sample": "Muestra / Vino",
   "page.lot": "Lote",
   "page.responsible": "Responsable",
+  "page.date": "Fecha del análisis",
+  "page.tabsLabel": "Secciones del análisis",
   "page.toolbarHint": "Guarde o retome el trabajo — todo en su navegador, sin servidor.",
   "page.chemIntro":
     "Introduzca los datos brutos. Donde los regímenes usan unidades distintas, elija la unidad en que midió — la conversión es automática. Las etiquetas BR / PT-UE indican qué regímenes usan cada parámetro.",
@@ -273,6 +283,7 @@ const es: Dict = {
 
   "field.computed": "calculado",
   "field.auxiliar": "auxiliar",
+  "field.unit": "unidad",
   "field.notEvaluated": "— no evaluado —",
   "field.absent": "Ausente",
   "field.present": "Presente",
@@ -331,6 +342,7 @@ const es: Dict = {
   "result.downloadMd": "Descargar Markdown (.md)",
   "result.downloadPdf": "Descargar PDF",
   "result.generatingPdf": "Generando PDF…",
+  "result.pdfError": "No se pudo generar el PDF: {msg}",
 
   "status.Conforme": "Conforme",
   "status.Não conforme": "No conforme",
@@ -363,6 +375,8 @@ const zh: Dict = {
   "page.sample": "样品 / 葡萄酒",
   "page.lot": "批次",
   "page.responsible": "负责人",
+  "page.date": "分析日期",
+  "page.tabsLabel": "分析板块",
   "page.toolbarHint": "保存或继续您的工作——全部在浏览器中，无需服务器。",
   "page.chemIntro":
     "请输入原始数据。当各法规使用不同单位时，选择您测量所用的单位——系统会自动换算。BR / PT-UE 标签表示各法规使用哪些参数。",
@@ -382,6 +396,7 @@ const zh: Dict = {
 
   "field.computed": "已计算",
   "field.auxiliar": "辅助",
+  "field.unit": "单位",
   "field.notEvaluated": "— 未评估 —",
   "field.absent": "无",
   "field.present": "有",
@@ -439,6 +454,7 @@ const zh: Dict = {
   "result.downloadMd": "下载 Markdown (.md)",
   "result.downloadPdf": "下载 PDF",
   "result.generatingPdf": "正在生成 PDF……",
+  "result.pdfError": "无法生成 PDF：{msg}",
 
   "status.Conforme": "合规",
   "status.Não conforme": "不合规",

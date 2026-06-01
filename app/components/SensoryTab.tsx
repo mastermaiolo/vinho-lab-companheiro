@@ -54,6 +54,8 @@ export default function SensoryTab({
                     <label className="text-sm">{td(c.label)}</label>
                     <input
                       type="range"
+                      aria-label={td(c.label)}
+                      aria-valuetext={`${v} / ${c.max}`}
                       min={0}
                       max={c.max}
                       step={1}

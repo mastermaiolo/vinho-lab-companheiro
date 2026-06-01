@@ -47,6 +47,7 @@ export default function Field({ field, value, onChange, computedValue }: Props) 
       <div className="rounded-lg glass p-3">
         <label className="text-sm font-medium">{td(field.label)}</label>
         <select
+          aria-label={td(field.label)}
           value={val === null ? "" : String(val)}
           onChange={(e) => onChange({ value: e.target.value === "" ? null : Number(e.target.value), unit })}
           className="mt-1 w-full rounded-md border border-[var(--border)] bg-[var(--input)] px-2 py-1.5 text-sm"
@@ -87,6 +88,7 @@ export default function Field({ field, value, onChange, computedValue }: Props) 
       <div className="mt-1 flex gap-2">
         <input
           type="number"
+          aria-label={`${td(field.label)}${unit && unit !== "—" ? ` (${unit})` : ""}`}
           inputMode="decimal"
           step="any"
           value={val === null ? "" : val}
@@ -96,6 +98,7 @@ export default function Field({ field, value, onChange, computedValue }: Props) 
         />
         {field.units.length > 1 ? (
           <select
+            aria-label={`${td(field.label)} — ${t("field.unit")}`}
             value={unit}
             onChange={(e) => onChange({ value: val, unit: e.target.value })}
             className="rounded-md border border-[var(--border)] bg-[var(--input)] px-2 py-1.5 text-xs"

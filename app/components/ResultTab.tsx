@@ -128,6 +128,9 @@ export default function ResultTab({ report }: { report: Report }) {
     setBusy(true);
     try {
       await downloadPdf(report);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      alert(t("result.pdfError", { msg }));
     } finally {
       setBusy(false);
     }

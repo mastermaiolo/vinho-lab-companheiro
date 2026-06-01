@@ -25,6 +25,9 @@ import { buildSession, type SessionData } from "@/lib/session";
 
 type Tab = "calculadora" | "quimica" | "sensorial" | "resultado";
 
+/** Ordem dos separadores (também a ordem de navegação por setas, WAI-ARIA Tabs). */
+const TABS: Tab[] = ["quimica", "calculadora", "sensorial", "resultado"];
+
 export default function Home() {
   const { t, td } = useI18n();
   const [tab, setTab] = useState<Tab>("quimica");
@@ -57,6 +60,21 @@ export default function Home() {
     const u = unifiedById(id)!;
     if (u.br) setBrCat(u.br);
     if (u.ptEu) setPtCat(u.ptEu);
+  };
+
+  // Navegação por teclado entre separadores (padrão WAI-ARIA Tabs).
+  const onTabKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    const i = TABS.indexOf(tab);
+    let next: number | null = null;
+    if (e.key === "ArrowRight") next = (i + 1) % TABS.length;
+    else if (e.key === "ArrowLeft") next = (i - 1 + TABS.length) % TABS.length;
+    else if (e.key === "Home") next = 0;
+    else if (e.key === "End") next = TABS.length - 1;
+    if (next === null) return;
+    e.preventDefault();
+    const id = TABS[next];
+    setTab(id);
+    document.getElementById(`tab-${id}`)?.focus();
   };
 
   // Valor calculado da relação álcool/extrato (para o campo computed).
@@ -198,12 +216,14 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-2">
             <input
+              aria-label={t("page.sample")}
               placeholder={t("page.sample")}
               value={meta.amostra}
               onChange={(e) => setMeta({ ...meta, amostra: e.target.value })}
               className="rounded-md border border-[var(--border)] bg-[var(--input)] px-2 py-2 text-sm"
             />
             <input
+              aria-label={t("page.lot")}
               placeholder={t("page.lot")}
               value={meta.lote}
               onChange={(e) => setMeta({ ...meta, lote: e.target.value })}
@@ -211,11 +231,13 @@ export default function Home() {
             />
             <input
               type="date"
+              aria-label={t("page.date")}
               value={meta.data}
               onChange={(e) => setMeta({ ...meta, data: e.target.value })}
               className="rounded-md border border-[var(--border)] bg-[var(--input)] px-2 py-2 text-sm"
             />
             <input
+              aria-label={t("page.responsible")}
               placeholder={t("page.responsible")}
               value={meta.responsavel}
               onChange={(e) => setMeta({ ...meta, responsavel: e.target.value })}
@@ -232,10 +254,20 @@ export default function Home() {
       </div>
 
       {/* Separadores */}
-      <nav className="mb-4 flex gap-1 border-b border-[var(--border)]">
-        {(["quimica", "calculadora", "sensorial", "resultado"] as Tab[]).map((id) => (
+      <nav
+        role="tablist"
+        aria-label={t("page.tabsLabel")}
+        onKeyDown={onTabKeyDown}
+        className="mb-4 flex gap-1 border-b border-[var(--border)]"
+      >
+        {TABS.map((id) => (
           <button
             key={id}
+            id={`tab-${id}`}
+            role="tab"
+            aria-selected={tab === id}
+            aria-controls={`panel-${id}`}
+            tabIndex={tab === id ? 0 : -1}
             onClick={() => setTab(id)}
             className={`-mb-px border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
               tab === id
@@ -249,7 +281,7 @@ export default function Home() {
       </nav>
 
       {tab === "quimica" && (
-        <div>
+        <div role="tabpanel" id="panel-quimica" aria-labelledby="tab-quimica">
           <p className="mb-3 text-xs text-[var(--muted)]">{t("page.chemIntro")}</p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {fields.map((f) => (
@@ -266,23 +298,31 @@ export default function Home() {
       )}
 
       {tab === "calculadora" && (
-        <CalculatorTab fields={fields} measurements={measurements} setMeasurement={setMeasurement} />
+        <div role="tabpanel" id="panel-calculadora" aria-labelledby="tab-calculadora">
+          <CalculatorTab fields={fields} measurements={measurements} setMeasurement={setMeasurement} />
+        </div>
       )}
 
       {tab === "sensorial" && (
-        <SensoryTab
-          scores={scores}
-          setScore={(k, v) => setScores((prev) => ({ ...prev, [k]: v }))}
-          defeitos={defeitos}
-          toggleDefeito={(d) =>
-            setDefeitos((prev) => (prev.includes(d) ? prev.filter((x) => x !== d) : [...prev, d]))
-          }
-          notas={notas}
-          setNotas={setNotas}
-        />
+        <div role="tabpanel" id="panel-sensorial" aria-labelledby="tab-sensorial">
+          <SensoryTab
+            scores={scores}
+            setScore={(k, v) => setScores((prev) => ({ ...prev, [k]: v }))}
+            defeitos={defeitos}
+            toggleDefeito={(d) =>
+              setDefeitos((prev) => (prev.includes(d) ? prev.filter((x) => x !== d) : [...prev, d]))
+            }
+            notas={notas}
+            setNotas={setNotas}
+          />
+        </div>
       )}
 
-      {tab === "resultado" && <ResultTab report={report} />}
+      {tab === "resultado" && (
+        <div role="tabpanel" id="panel-resultado" aria-labelledby="tab-resultado">
+          <ResultTab report={report} />
+        </div>
+      )}
 
       <footer className="mt-10 border-t border-[var(--border)] pt-4 text-xs text-[var(--muted)]">
         {t("page.footer")}

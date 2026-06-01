@@ -48,7 +48,9 @@ export function computeOivScore(scores: Record<string, number>): OivScore {
     for (const c of section.criteria) {
       const k = `${sectionKey}.${c.key}`;
       let v = scores[k] ?? 0;
-      v = Math.min(v, c.max);
+      // Limita a [0, c.max]: protege contra sessões importadas com valores
+      // negativos ou acima do máximo (os sliders já têm min=0, mas o JSON não).
+      v = Math.max(0, Math.min(v, c.max));
       total += v;
       sectionDetail[c.label] = { obtido: v, maximo: c.max };
     }
