@@ -255,7 +255,7 @@ export default function Home() {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--muted)] mb-3">
           {t("page.wineType")}
         </h2>
-        <div className="flex gap-3 overflow-x-auto pb-3 -mx-2 px-2 snap-x snap-mandatory scrollbar-thin">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {UNIFIED_CATEGORIES.map((c) => {
             const selected = tipoId === c.id;
             const st = CATEGORY_STYLES[c.id] || { dot: "bg-gray-400", bg: "rgba(255,255,255,0.05)", text: "#fff" };
@@ -264,7 +264,7 @@ export default function Home() {
                 key={c.id}
                 type="button"
                 onClick={() => onTipoChange(c.id)}
-                className={`snap-start shrink-0 rounded-xl px-4 py-3 flex flex-col items-start min-w-[150px] md:min-w-[170px] border transition-all duration-300 cursor-pointer select-none ${
+                className={`rounded-xl px-4 py-3 flex flex-col items-start border transition-all duration-300 cursor-pointer select-none ${
                   selected
                     ? "bg-[var(--card)] border-[var(--secondary)] shadow-lg scale-[1.02] ring-1 ring-[var(--secondary)]"
                     : "bg-transparent border-[var(--border)] hover:bg-[var(--input)] hover:border-white/20"

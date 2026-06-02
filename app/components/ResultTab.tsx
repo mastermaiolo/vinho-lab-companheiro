@@ -160,6 +160,34 @@ export default function ResultTab({ report }: { report: Report }) {
           <Verdict label={t("result.vExportBRPT")} ok={v.exportBRtoPT} blocks={v.bloqueiosPT} />
         </div>
         <p className="mt-3 text-xs text-[var(--muted)] leading-relaxed italic">{t("result.exportNote")}</p>
+
+        <div className="mt-4 flex flex-wrap gap-4">
+          <button
+            type="button"
+            onClick={() => downloadMarkdown(renderMarkdown(report), report.meta.lote || report.meta.amostra)}
+            className="rounded-xl bg-[var(--accent)] px-5 py-3 font-semibold text-white transition-all shadow-[0_4px_16px_rgba(139,28,43,0.3)] hover:bg-[var(--accent-hover)] hover:scale-[1.01] cursor-pointer flex items-center gap-2"
+          >
+            <span>⬇</span> {t("result.downloadMd")}
+          </button>
+          <button
+            type="button"
+            onClick={handlePdf}
+            disabled={busy}
+            className="rounded-xl border border-[var(--secondary)] text-[var(--secondary)] px-5 py-3 font-semibold transition-all hover:bg-[var(--accent)] hover:text-white hover:border-transparent hover:scale-[1.01] cursor-pointer flex items-center gap-2 disabled:opacity-50 disabled:pointer-events-none"
+          >
+            {busy ? (
+              <>
+                <span className="inline-block animate-spin">⏳</span>
+                <span>{t("result.generatingPdf")}</span>
+              </>
+            ) : (
+              <>
+                <span>⬇</span>
+                <span>{t("result.downloadPdf")}</span>
+              </>
+            )}
+          </button>
+        </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
@@ -208,34 +236,6 @@ export default function ResultTab({ report }: { report: Report }) {
           )}
         </div>
       )}
-
-      <div className="flex flex-wrap gap-4 pt-4 border-t border-[var(--border)]">
-        <button
-          type="button"
-          onClick={() => downloadMarkdown(renderMarkdown(report), report.meta.lote || report.meta.amostra)}
-          className="rounded-xl bg-[var(--accent)] px-5 py-3 font-semibold text-white transition-all shadow-[0_4px_16px_rgba(139,28,43,0.3)] hover:bg-[var(--accent-hover)] hover:scale-[1.01] cursor-pointer flex items-center gap-2"
-        >
-          <span>⬇</span> {t("result.downloadMd")}
-        </button>
-        <button
-          type="button"
-          onClick={handlePdf}
-          disabled={busy}
-          className="rounded-xl border border-[var(--secondary)] text-[var(--secondary)] px-5 py-3 font-semibold transition-all hover:bg-[var(--accent)] hover:text-white hover:border-transparent hover:scale-[1.01] cursor-pointer flex items-center gap-2 disabled:opacity-50 disabled:pointer-events-none"
-        >
-          {busy ? (
-            <>
-              <span className="inline-block animate-spin">⏳</span>
-              <span>{t("result.generatingPdf")}</span>
-            </>
-          ) : (
-            <>
-              <span>⬇</span>
-              <span>{t("result.downloadPdf")}</span>
-            </>
-          )}
-        </button>
-      </div>
     </div>
   );
 }
