@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "./components/I18nProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+// Monoespaçada para os números de laboratório (classe `font-mono`): garante
+// alinhamento em coluna e leitura coerente dos algarismos. Sem isto, a variável
+// --font-geist-mono ficava indefinida e os valores caíam na fonte proporcional.
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -23,7 +31,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-PT" className={`${geistSans.variable} ${playfairDisplay.variable} h-full antialiased`}>
+    <html lang="pt-PT" className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}>
       <body className="min-h-full">
         <I18nProvider>{children}</I18nProvider>
       </body>
