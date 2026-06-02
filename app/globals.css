@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Base escura com tom de vinho. */
-  --background: #160a0e;
-  --foreground: #f3e9ea;
-  --primary: #e7b3b8;
-  --secondary: #c98a93;
-  /* Preenchimento de botões: vinho profundo legível com texto branco. */
-  --accent: #9a2434;
-  --accent-hover: #b83a4a;
-  --border: rgba(255, 255, 255, 0.12);
-  /* Superfície de vidro: translúcida, para o blur ter o que desfocar. */
-  --card: rgba(40, 18, 24, 0.45);
-  --input: rgba(255, 255, 255, 0.06);
-  --muted: #b9a3a6;
-  --ok-bg: rgba(30, 107, 48, 0.22);
-  --ok-fg: #8be0a0;
-  --bad-bg: rgba(160, 24, 24, 0.24);
-  --bad-fg: #f3a4a4;
-  --warn-bg: rgba(138, 90, 0, 0.24);
-  --warn-fg: #f0cd84;
+  /* Base escura profunda com tom de vinho envelhecido. */
+  --background: #0a0305;
+  --foreground: #f6edf0;
+  --primary: #f5d6da;
+  --secondary: #df9ba6;
+  /* Preenchimento de botões e acentos: baga/vinho vibrante mas sofisticado. */
+  --accent: #8b1c2b;
+  --accent-hover: #ad283b;
+  --border: rgba(229, 179, 187, 0.1);
+  /* Superfície de vidro: translúcida rica e refinada. */
+  --card: rgba(22, 9, 12, 0.6);
+  --input: rgba(229, 179, 187, 0.04);
+  --muted: #a38c90;
+  --ok-bg: rgba(26, 94, 43, 0.28);
+  --ok-fg: #9cebb0;
+  --bad-bg: rgba(142, 21, 33, 0.28);
+  --bad-fg: #fbb6b6;
+  --warn-bg: rgba(125, 81, 0, 0.28);
+  --warn-fg: #f9d896;
 }
 
 @theme inline {
@@ -33,33 +33,66 @@
   --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair-display);
 }
 
-/* Superfície de vidro reutilizável (glassmorphism). */
+/* Superfície de vidro premium (glassmorphism). */
 @utility glass {
   background-color: var(--card);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(24px) saturate(130%);
+  -webkit-backdrop-filter: blur(24px) saturate(130%);
   border: 1px solid var(--border);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 body {
   background-color: var(--background);
-  /* Gradientes de vinho fixos para dar profundidade ao blur do vidro. */
+  /* Gradientes de vinho envelhecido fixos de alta densidade visual. */
   background-image:
-    radial-gradient(60rem 60rem at 12% -10%, rgba(122, 22, 38, 0.55), transparent 60%),
-    radial-gradient(50rem 50rem at 100% 0%, rgba(74, 14, 14, 0.5), transparent 55%),
-    radial-gradient(70rem 70rem at 50% 120%, rgba(40, 10, 30, 0.6), transparent 60%);
+    radial-gradient(80rem 80rem at 5% -10%, rgba(139, 28, 43, 0.35), transparent 65%),
+    radial-gradient(60rem 60rem at 95% 10%, rgba(74, 14, 25, 0.3), transparent 60%),
+    radial-gradient(80rem 80rem at 50% 110%, rgba(22, 9, 12, 0.9), transparent 70%);
   background-attachment: fixed;
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, Arial, sans-serif;
+  font-family: var(--font-sans), system-ui, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Ruído analógico sutil para textura orgânica de rótulo / cortiça */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.015;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1,
 h2,
 h3 {
-  color: var(--primary);
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 179, 187, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }
 
 /* Inputs/selects translúcidos coerentes com o vidro. */
@@ -67,4 +100,13 @@ input,
 select,
 textarea {
   color-scheme: dark;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Micro-interação para inputs focados */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--secondary) !important;
+  box-shadow: 0 0 0 2px rgba(223, 155, 166, 0.15);
 }

@@ -26,6 +26,16 @@ export const DEFAULT_LOCALE: Locale = "pt";
 type Dict = Record<string, string>;
 
 const pt: Dict = {
+  "page.sampleSheet": "Ficha de Amostra",
+  "page.noSample": "Sem identificação",
+  "page.edit": "Editar",
+  "page.hide": "Ocultar",
+  "page.otherParams": "Outros parâmetros",
+  "page.groupAlcool": "Teor Alcoólico & Extrato",
+  "page.groupAcidez": "Acidez & pH",
+  "page.groupSo2": "Conservantes (SO₂)",
+  "page.groupSais": "Compostos & Sais",
+  "page.groupMetais": "Metais & Contaminantes",
   "page.tagline":
     "Companheiro de laboratório — valida o mesmo vinho contra o Brasil (MAPA) e Portugal/UE (IVV) e indica a exportabilidade. Processamento 100 % no seu navegador.",
   "page.wineType": "Tipo de vinho",
@@ -139,6 +149,16 @@ const pt: Dict = {
 };
 
 const en: Dict = {
+  "page.sampleSheet": "Sample Sheet",
+  "page.noSample": "No identification",
+  "page.edit": "Edit",
+  "page.hide": "Hide",
+  "page.otherParams": "Other parameters",
+  "page.groupAlcool": "Alcohol & Extract",
+  "page.groupAcidez": "Acidity & pH",
+  "page.groupSo2": "Preservatives (SO₂)",
+  "page.groupSais": "Compounds & Salts",
+  "page.groupMetais": "Metals & Contaminants",
   "page.tagline":
     "Your lab companion — validates the same wine against Brazil (MAPA) and Portugal/EU (IVV) and indicates exportability. 100% processed in your browser.",
   "page.wineType": "Wine type",
@@ -252,6 +272,16 @@ const en: Dict = {
 };
 
 const es: Dict = {
+  "page.sampleSheet": "Ficha de Muestra",
+  "page.noSample": "Sin identificación",
+  "page.edit": "Editar",
+  "page.hide": "Ocultar",
+  "page.otherParams": "Otros parámetros",
+  "page.groupAlcool": "Alcohol y Extracto",
+  "page.groupAcidez": "Acidez y pH",
+  "page.groupSo2": "Conservantes (SO₂)",
+  "page.groupSais": "Compuestos y Sales",
+  "page.groupMetais": "Metales y Contaminantes",
   "page.tagline":
     "Compañero de laboratorio — valida el mismo vino frente a Brasil (MAPA) y Portugal/UE (IVV) e indica la exportabilidad. Procesamiento 100 % en su navegador.",
   "page.wineType": "Tipo de vino",
@@ -365,6 +395,16 @@ const es: Dict = {
 };
 
 const zh: Dict = {
+  "page.sampleSheet": "样品单",
+  "page.noSample": "无标识",
+  "page.edit": "编辑",
+  "page.hide": "隐藏",
+  "page.otherParams": "其他参数",
+  "page.groupAlcool": "酒精度与提取物",
+  "page.groupAcidez": "酸度与 pH",
+  "page.groupSo2": "防腐剂 (SO₂)",
+  "page.groupSais": "化合物与盐类",
+  "page.groupMetais": "金属与污染物",
   "page.tagline":
     "您的实验室助手——以巴西（MAPA）和葡萄牙/欧盟（IVV）法规校验同一款葡萄酒并判断可出口性。100% 在您的浏览器中处理。",
   "page.wineType": "葡萄酒类型",

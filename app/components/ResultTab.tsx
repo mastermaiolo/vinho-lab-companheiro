@@ -10,13 +10,13 @@ import { useI18n, Rich } from "./I18nProvider";
 function statusClasses(status: string): string {
   switch (status) {
     case "Conforme":
-      return "bg-[var(--ok-bg)] text-[var(--ok-fg)]";
+      return "bg-[var(--ok-bg)] text-[var(--ok-fg)] border border-[var(--ok-fg)]/20";
     case "Não conforme":
-      return "bg-[var(--bad-bg)] text-[var(--bad-fg)]";
+      return "bg-[var(--bad-bg)] text-[var(--bad-fg)] border border-[var(--bad-fg)]/20";
     case "Sem limite":
-      return "bg-[var(--input)] text-[var(--muted)]";
+      return "bg-white/5 text-[var(--muted)] border border-transparent";
     default:
-      return "bg-[var(--warn-bg)] text-[var(--warn-fg)]";
+      return "bg-[var(--warn-bg)] text-[var(--warn-fg)] border border-[var(--warn-fg)]/20";
   }
 }
 
@@ -30,71 +30,78 @@ function limitStr(min: number | null, max: number | null): string {
 function RegimeCard({ r }: { r: RegimeReport }) {
   const { t, tStatus, td } = useI18n();
   const flag = r.regime === "BR" ? "🇧🇷 Brasil (MAPA)" : "🇵🇹🇪🇺 Portugal / UE (IVV)";
+  const conforme = r.summary.conforme;
   return (
-    <div className="rounded-lg glass p-4">
-      <div className="mb-2 flex items-center justify-between">
-        <h3 className="font-semibold">{flag}</h3>
-        <span
-          className={`rounded px-2 py-0.5 text-xs font-medium ${
-            r.summary.conforme ? "bg-[var(--ok-bg)] text-[var(--ok-fg)]" : "bg-[var(--bad-bg)] text-[var(--bad-fg)]"
-          }`}
-        >
-          {tStatus(r.summary.overall)}
-        </span>
-      </div>
-      <p className="mb-2 text-xs text-[var(--muted)]">{td(r.categoryLabel)}</p>
-      <div className="-mx-1 overflow-x-auto">
-        <table className="w-full text-left text-xs">
-          <thead className="text-[var(--muted)]">
-            <tr>
-              <th className="py-1 pr-2 font-medium">{t("result.thParam")}</th>
-              <th className="py-1 pr-2 font-medium">{t("result.thValue")}</th>
-              <th className="py-1 pr-2 font-medium">{t("result.thLimit")}</th>
-              <th className="py-1 font-medium">{t("result.thStatus")}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {r.results.map((x, i) => (
-              <tr key={i} className="border-t border-[var(--border)]">
-                <td className="py-1 pr-2">{td(x.parameter)}</td>
-                <td className="py-1 pr-2 font-mono">
-                  {x.value !== null ? (
-                    <>
-                      {num(x.value)}
-                      {x.uncertainty != null && x.uncertainty > 0 && (
-                        <span className="text-[var(--muted)]"> ± {num(x.uncertainty)}</span>
-                      )}{" "}
-                      {x.legalUnit}
-                    </>
-                  ) : (
-                    "—"
-                  )}
-                </td>
-                <td className="py-1 pr-2">{limitStr(x.min, x.max)}</td>
-                <td className="py-1">
-                  <span className={`rounded px-1.5 py-0.5 ${statusClasses(x.status)}`}>{tStatus(x.status)}</span>
-                  {x.borderline && (
-                    <span
-                      className="ml-1 rounded bg-[var(--warn-bg)] px-1.5 py-0.5 text-[var(--warn-fg)]"
-                      title={t("result.borderlineTitle", {
-                        unc: num(x.uncertainty ?? 0),
-                        unit: x.legalUnit,
-                        kind: x.uncertaintyKind === "R" ? t("result.kindR") : t("result.kindr"),
-                      })}
-                    >
-                      {t("result.borderline")}
-                    </span>
-                  )}
-                </td>
+    <div className="rounded-2xl glass p-5 border border-[var(--border)] flex flex-col justify-between">
+      <div>
+        <div className="mb-4 flex items-center justify-between gap-3 border-b border-[var(--border)] pb-3">
+          <h3 className="font-serif text-lg font-bold text-[var(--primary)]">{flag}</h3>
+          <span
+            className={`rounded-full px-3 py-0.5 text-xs font-bold ${
+              conforme ? "bg-[var(--ok-bg)] text-[var(--ok-fg)] border border-[var(--ok-fg)]/20" : "bg-[var(--bad-bg)] text-[var(--bad-fg)] border border-[var(--bad-fg)]/20"
+            }`}
+          >
+            {tStatus(r.summary.overall)}
+          </span>
+        </div>
+        <p className="mb-4 text-xs font-medium text-[var(--muted)] italic">{td(r.categoryLabel)}</p>
+        <div className="-mx-1 overflow-x-auto">
+          <table className="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr className="text-[var(--muted)] border-b border-[var(--border)] text-[10px] uppercase tracking-wider font-semibold">
+                <th className="py-2 pr-3 font-semibold">{t("result.thParam")}</th>
+                <th className="py-2 pr-3 font-semibold text-right">{t("result.thValue")}</th>
+                <th className="py-2 pr-3 font-semibold">{t("result.thLimit")}</th>
+                <th className="py-2 font-semibold text-center">{t("result.thStatus")}</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {r.results.map((x, i) => (
+                <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                  <td className="py-2.5 pr-3 font-medium text-[var(--foreground)]">{td(x.parameter)}</td>
+                  <td className="py-2.5 pr-3 text-right font-mono font-medium text-[var(--primary)] whitespace-nowrap">
+                    {x.value !== null ? (
+                      <>
+                        {num(x.value)}
+                        {x.uncertainty != null && x.uncertainty > 0 && (
+                          <span className="text-[var(--muted)] text-[10px]"> ± {num(x.uncertainty)}</span>
+                        )}{" "}
+                        <span className="text-xs text-[var(--muted)]">{x.legalUnit}</span>
+                      </>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
+                  <td className="py-2.5 pr-3 font-mono text-[var(--muted)] whitespace-nowrap">{limitStr(x.min, x.max)}</td>
+                  <td className="py-2.5 text-center whitespace-nowrap">
+                    <div className="flex items-center justify-center gap-1">
+                      <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${statusClasses(x.status)}`}>
+                        {tStatus(x.status)}
+                      </span>
+                      {x.borderline && (
+                        <span
+                          className="rounded-full bg-[var(--warn-bg)] border border-[var(--warn-fg)]/25 px-2 py-0.5 text-[9px] font-bold text-[var(--warn-fg)] cursor-help select-none"
+                          title={t("result.borderlineTitle", {
+                            unc: num(x.uncertainty ?? 0),
+                            unit: x.legalUnit,
+                            kind: x.uncertaintyKind === "R" ? t("result.kindR") : t("result.kindr"),
+                          })}
+                        >
+                          ⚠️ {t("result.borderline")}
+                        </span>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       {r.regulatoryBasis.length > 0 && (
-        <p className="mt-2 border-t border-[var(--border)] pt-2 text-[10px] text-[var(--muted)]">
+        <div className="mt-4 border-t border-[var(--border)] pt-3 text-[10px] text-[var(--muted)] leading-relaxed">
           <strong>{t("result.legalBasis")}:</strong> {r.regulatoryBasis.join(" · ")}
-        </p>
+        </div>
       )}
     </div>
   );
@@ -104,17 +111,23 @@ function Verdict({ label, ok, blocks }: { label: string; ok: boolean; blocks?: s
   const { t } = useI18n();
   return (
     <div
-      className={`rounded-lg border p-3 ${
-        ok ? "border-[var(--ok-fg)]/30 bg-[var(--ok-bg)]" : "border-[var(--bad-fg)]/30 bg-[var(--bad-bg)]"
+      className={`rounded-2xl border p-4 flex flex-col justify-between transition-all duration-300 ${
+        ok
+          ? "border-[var(--ok-fg)]/20 bg-[var(--ok-bg)] shadow-[0_4px_20px_rgba(26,94,43,0.1)] hover:scale-[1.01]"
+          : "border-[var(--bad-fg)]/20 bg-[var(--bad-bg)] shadow-[0_4px_20px_rgba(142,21,33,0.1)] hover:scale-[1.01]"
       }`}
     >
-      <div className="flex items-center gap-2">
-        <span className="text-lg">{ok ? "✅" : "❌"}</span>
-        <span className="text-sm font-medium">{label}</span>
+      <div className="flex items-start gap-3">
+        <span className="text-xl shrink-0 mt-0.5 select-none">{ok ? "🟢" : "🔴"}</span>
+        <div>
+          <h4 className="text-sm font-semibold text-[var(--foreground)] leading-snug">{label}</h4>
+          {!ok && blocks && blocks.length > 0 && (
+            <p className="mt-2 text-xs text-[var(--bad-fg)] font-medium leading-relaxed">
+              <strong>{t("result.blocks")}:</strong> {blocks.join("; ")}
+            </p>
+          )}
+        </div>
       </div>
-      {!ok && blocks && blocks.length > 0 && (
-        <p className="mt-1 text-xs text-[var(--bad-fg)]">{t("result.blocks")}: {blocks.join("; ")}</p>
-      )}
     </div>
   );
 }
@@ -137,70 +150,90 @@ export default function ResultTab({ report }: { report: Report }) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 animate-[fadeIn_0.2s_ease-out]">
       <div>
-        <h2 className="mb-3 text-lg font-semibold">{t("result.exportVerdict")}</h2>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <h2 className="mb-4 text-xl font-serif font-bold text-[var(--primary)]">{t("result.exportVerdict")}</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
           <Verdict label={t("result.vConformeBR")} ok={v.conformeBR} blocks={v.bloqueiosBR} />
           <Verdict label={t("result.vConformePT")} ok={v.conformePT} blocks={v.bloqueiosPT} />
           <Verdict label={t("result.vExportPTBR")} ok={v.exportPTtoBR} blocks={v.bloqueiosBR} />
           <Verdict label={t("result.vExportBRPT")} ok={v.exportBRtoPT} blocks={v.bloqueiosPT} />
         </div>
-        <p className="mt-2 text-xs text-[var(--muted)]">{t("result.exportNote")}</p>
+        <p className="mt-3 text-xs text-[var(--muted)] leading-relaxed italic">{t("result.exportNote")}</p>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2">
         <RegimeCard r={report.br} />
         <RegimeCard r={report.pt} />
       </div>
 
-      <p className="text-xs text-[var(--muted)]">
+      <p className="text-xs text-[var(--muted)] leading-relaxed border-l-2 border-[var(--border)] pl-3 italic">
         <Rich text={t("result.marginNote")} />
       </p>
 
-      {report.molecular && (
-        <div className="rounded-lg glass p-4">
-          <h3 className="mb-1 font-semibold">{t("result.molecularTitle")}</h3>
-          <p className="text-sm">
-            <Rich
-              text={t("result.molecularLine", {
-                v: num(report.molecular.so2Molecular, 4),
-                estado: td(report.molecular.estado),
-                frac: num(report.molecular.fracaoMolecularPct, 3),
-                ph: num(report.molecular.ph, 2),
-              })}
-            />
-          </p>
+      {(report.molecular || (report.sensory && report.sensory.enabled)) && (
+        <div className="grid gap-4 sm:grid-cols-2">
+          {report.molecular && (
+            <div className="rounded-2xl glass p-5 border border-[var(--border)] flex flex-col justify-between">
+              <div>
+                <h3 className="mb-2 font-serif font-bold text-sm text-[var(--primary)] uppercase tracking-wider">{t("result.molecularTitle")}</h3>
+                <p className="text-sm text-[var(--foreground)] leading-relaxed">
+                  <Rich
+                    text={t("result.molecularLine", {
+                      v: num(report.molecular.so2Molecular, 4),
+                      estado: td(report.molecular.estado),
+                      frac: num(report.molecular.fracaoMolecularPct, 3),
+                      ph: num(report.molecular.ph, 2),
+                    })}
+                  />
+                </p>
+              </div>
+            </div>
+          )}
+
+          {report.sensory?.enabled && (
+            <div className="rounded-2xl glass p-5 border border-[var(--border)] flex flex-col justify-between">
+              <div>
+                <h3 className="mb-2 font-serif font-bold text-sm text-[var(--primary)] uppercase tracking-wider">{t("result.sensoryTitle")}</h3>
+                <p className="text-sm text-[var(--foreground)] leading-relaxed">
+                  Pontuação total: <strong className="text-[var(--secondary)]">{report.sensory.score.total} / 100</strong> — Categoria: <strong className="text-[var(--primary)]">{td(report.sensory.score.categoria)}</strong>
+                  {report.sensory.defeitos.length > 0 && (
+                    <span className="block mt-2 text-xs text-[var(--bad-fg)] font-semibold">
+                      ⚠️ {t("result.defects")}: {report.sensory.defeitos.map(d => td(d)).join("; ")}
+                    </span>
+                  )}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
-      {report.sensory?.enabled && (
-        <div className="rounded-lg glass p-4">
-          <h3 className="mb-1 font-semibold">{t("result.sensoryTitle")}</h3>
-          <p className="text-sm">
-            {report.sensory.score.total} / 100 — <strong>{td(report.sensory.score.categoria)}</strong>
-            {report.sensory.defeitos.length > 0 && (
-              <span className="block text-xs text-[var(--bad-fg)]">
-                {t("result.defects")}: {report.sensory.defeitos.join("; ")}
-              </span>
-            )}
-          </p>
-        </div>
-      )}
-
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-4 pt-4 border-t border-[var(--border)]">
         <button
+          type="button"
           onClick={() => downloadMarkdown(renderMarkdown(report), report.meta.lote || report.meta.amostra)}
-          className="rounded-lg bg-[var(--accent)] px-4 py-2.5 font-medium text-white transition-colors hover:bg-[var(--accent-hover)]"
+          className="rounded-xl bg-[var(--accent)] px-5 py-3 font-semibold text-white transition-all shadow-[0_4px_16px_rgba(139,28,43,0.3)] hover:bg-[var(--accent-hover)] hover:scale-[1.01] cursor-pointer flex items-center gap-2"
         >
-          ⬇ {t("result.downloadMd")}
+          <span>⬇</span> {t("result.downloadMd")}
         </button>
         <button
+          type="button"
           onClick={handlePdf}
           disabled={busy}
-          className="rounded-lg border border-[var(--primary)] px-4 py-2.5 font-medium text-[var(--primary)] transition-colors hover:bg-[var(--accent)] hover:text-white disabled:opacity-50"
+          className="rounded-xl border border-[var(--secondary)] text-[var(--secondary)] px-5 py-3 font-semibold transition-all hover:bg-[var(--accent)] hover:text-white hover:border-transparent hover:scale-[1.01] cursor-pointer flex items-center gap-2 disabled:opacity-50 disabled:pointer-events-none"
         >
-          {busy ? t("result.generatingPdf") : `⬇ ${t("result.downloadPdf")}`}
+          {busy ? (
+            <>
+              <span className="inline-block animate-spin">⏳</span>
+              <span>{t("result.generatingPdf")}</span>
+            </>
+          ) : (
+            <>
+              <span>⬇</span>
+              <span>{t("result.downloadPdf")}</span>
+            </>
+          )}
         </button>
       </div>
     </div>
