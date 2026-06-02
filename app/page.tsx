@@ -241,7 +241,7 @@ export default function Home() {
       <header className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[var(--border)] pb-6">
         <div>
           <h1 className="text-3xl font-bold tracking-wide text-[var(--primary)] flex items-center gap-2">
-            🍷 Vinho-Lab <span className="text-xs font-sans font-medium px-2 py-0.5 rounded-full bg-[var(--accent)] text-white select-none">v1.0</span>
+            🍷 Vinho Lab Comp <span className="text-xs font-sans font-medium px-2 py-0.5 rounded-full bg-[var(--accent)] text-white select-none">v1.0</span>
           </h1>
           <p className="mt-1 text-sm text-[var(--muted)] font-sans">{t("page.tagline")}</p>
         </div>
