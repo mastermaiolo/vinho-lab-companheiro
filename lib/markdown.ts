@@ -61,7 +61,7 @@ function regimeTable(r: RegimeReport): string {
 
 export function renderMarkdown(rep: Report): string {
   const L: string[] = [];
-  L.push("# 🍷 Vinho-Lab — Boletim de análise consolidado");
+  L.push("# 🍷 Vinho Lab Comp — Boletim de análise consolidado");
   L.push("");
   L.push(`**Tipo de vinho:** ${rep.tipoLabel}`);
   L.push("");

@@ -87,7 +87,7 @@ export function parseSession(raw: unknown): SessionData {
   }
   const o = raw as Record<string, unknown>;
   if (o.kind !== SESSION_KIND) {
-    throw new Error("Ficheiro não reconhecido como uma sessão do Vinho-Lab.");
+    throw new Error("Ficheiro não reconhecido como uma sessão do Vinho Lab Comp.");
   }
   const meta = (o.meta ?? {}) as Partial<SampleMeta>;
 

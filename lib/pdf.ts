@@ -83,7 +83,7 @@ function buildDocDefinition(rep: Report): TDocumentDefinitions {
   const yn = (b: boolean) => (b ? "SIM" : "NAO");
 
   const content: Content[] = [
-    { text: "Vinho-Lab - Boletim de analise consolidado", style: "h1" },
+    { text: "Vinho Lab Comp - Boletim de analise consolidado", style: "h1" },
     { text: s(`Tipo de vinho: ${rep.tipoLabel}`), margin: [0, 0, 0, 8], fontSize: 10 },
     {
       table: {
@@ -187,7 +187,7 @@ function buildDocDefinition(rep: Report): TDocumentDefinitions {
       tk: { bold: true, color: SECONDARY },
     },
     pageMargins: [40, 40, 40, 40],
-    info: { title: `Boletim ${rep.meta.lote || rep.meta.amostra || "Vinho-Lab"}` },
+    info: { title: `Boletim ${rep.meta.lote || rep.meta.amostra || "Vinho Lab Comp"}` },
   };
 }
 

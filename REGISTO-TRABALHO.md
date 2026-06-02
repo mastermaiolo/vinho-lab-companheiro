@@ -1,4 +1,4 @@
-# Vinho-Lab Companheiro — Registo do trabalho
+# Vinho Lab Comp — Registo do trabalho
 
 > Companheiro de laboratório que valida **o mesmo vinho** contra dois regimes —
 > **Brasil (MAPA, IN 14/2018)** e **Portugal/UE (IVV, Reg. UE 1308/2013, 2019/934,
@@ -195,7 +195,7 @@ export function downloadSession(data: SessionData, name: string): void {
 export function parseSession(raw: unknown): SessionData {
   if (typeof raw !== "object" || raw === null) throw new Error("Ficheiro inválido: não é um objeto JSON.");
   const o = raw as Record<string, unknown>;
-  if (o.kind !== SESSION_KIND) throw new Error("Ficheiro não reconhecido como uma sessão do Vinho-Lab.");
+  if (o.kind !== SESSION_KIND) throw new Error("Ficheiro não reconhecido como uma sessão do Vinho Lab Comp.");
 
   const tipo = (typeof o.tipoId === "string" && unifiedById(o.tipoId)) ? o.tipoId : "tinto";
   const u = unifiedById(tipo)!;

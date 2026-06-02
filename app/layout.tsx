@@ -22,7 +22,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Vinho-Lab — Companheiro de laboratório",
+  title: "Vinho Lab Comp — Companheiro de laboratório",
   description:
     "Validação físico-química e sensorial de vinhos contra as legislações do Brasil (MAPA) e Portugal/UE (IVV), com veredicto de exportabilidade. Processamento 100% no navegador.",
 };

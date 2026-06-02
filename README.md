@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 <p align="center">
-  <img src="docs/banner.svg" alt="Vinho-Lab Companheiro" width="100%">
+  <img src="docs/banner.svg" alt="Vinho Lab Comp" width="100%">
 </p>
 
 <p align="center">
@@ -151,7 +151,7 @@ Distribuído sob a licença MIT. Ver [`LICENSE`](./LICENSE).
   <a href="#top">Português</a> &nbsp;·&nbsp; <b>English</b>
 </p>
 
-# 🍷 Vinho-Lab Companheiro
+# 🍷 Vinho Lab Comp
 
 A laboratory companion that validates **the same wine** against two regulatory
 regimes — **Brazil (MAPA, IN 14/2018)** and **Portugal / EU (IVV; EU Reg.

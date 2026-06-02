@@ -17,7 +17,7 @@ export default function Error({
 }) {
   useEffect(() => {
     // Sem telemetria externa (coerência RGPD): apenas consola local.
-    console.error("Vinho-Lab — erro de renderização:", error);
+    console.error("Vinho Lab Comp — erro de renderização:", error);
   }, [error]);
 
   return (

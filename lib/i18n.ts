@@ -134,8 +134,8 @@ const pt: Dict = {
   "status.Não medido": "Não medido",
   "status.overall.conformeNm": "Conforme (com parâmetros não medidos)",
 
-  "modal.title": "Vinho-Lab — primeira versão",
-  "modal.intro": "Bem-vindo ao **Vinho-Lab**, o seu companheiro de laboratório. Antes de começar:",
+  "modal.title": "Vinho Lab Comp — primeira versão",
+  "modal.intro": "Bem-vindo ao **Vinho Lab Comp**, o seu companheiro de laboratório. Antes de começar:",
   "modal.b1": "É a **primeira versão**, ainda em evolução, e um projeto **open source**.",
   "modal.b2": "**Não são recolhidas métricas** nem dados pessoais — em respeito pelo **RGPD/GDPR**.",
   "modal.b3":
@@ -257,8 +257,8 @@ const en: Dict = {
   "status.Não medido": "Not measured",
   "status.overall.conformeNm": "Compliant (with unmeasured parameters)",
 
-  "modal.title": "Vinho-Lab — first version",
-  "modal.intro": "Welcome to **Vinho-Lab**, your lab companion. Before you start:",
+  "modal.title": "Vinho Lab Comp — first version",
+  "modal.intro": "Welcome to **Vinho Lab Comp**, your lab companion. Before you start:",
   "modal.b1": "This is the **first version**, still evolving, and an **open source** project.",
   "modal.b2": "**No metrics** or personal data are collected — in respect of the **GDPR**.",
   "modal.b3":
@@ -380,8 +380,8 @@ const es: Dict = {
   "status.Não medido": "No medido",
   "status.overall.conformeNm": "Conforme (con parámetros no medidos)",
 
-  "modal.title": "Vinho-Lab — primera versión",
-  "modal.intro": "Bienvenido a **Vinho-Lab**, su compañero de laboratorio. Antes de empezar:",
+  "modal.title": "Vinho Lab Comp — primera versión",
+  "modal.intro": "Bienvenido a **Vinho Lab Comp**, su compañero de laboratorio. Antes de empezar:",
   "modal.b1": "Es la **primera versión**, aún en evolución, y un proyecto **open source**.",
   "modal.b2": "**No se recogen métricas** ni datos personales — en respeto al **RGPD/GDPR**.",
   "modal.b3":
@@ -502,8 +502,8 @@ const zh: Dict = {
   "status.Não medido": "未测量",
   "status.overall.conformeNm": "合规（部分参数未测量）",
 
-  "modal.title": "Vinho-Lab — 首个版本",
-  "modal.intro": "欢迎使用 **Vinho-Lab**，您的实验室助手。开始之前：",
+  "modal.title": "Vinho Lab Comp — 首个版本",
+  "modal.intro": "欢迎使用 **Vinho Lab Comp**，您的实验室助手。开始之前：",
   "modal.b1": "这是 **首个版本**，仍在不断完善，是一个 **开源** 项目。",
   "modal.b2": "**不收集任何统计数据** 或个人资料——遵循 **GDPR**。",
   "modal.b3":
